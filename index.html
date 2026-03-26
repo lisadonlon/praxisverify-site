@@ -19,11 +19,11 @@
         /* ── Variables ── */
         :root {
             --bg: #1e2028;
-            --surface: rgba(170, 170, 185, 0.28);
-            --surface-solid: rgba(180, 180, 192, 0.32);
+            --surface: rgba(175, 175, 190, 0.55);
+            --surface-solid: rgba(180, 180, 192, 0.60);
             --border: rgba(255, 255, 255, 0.08);
-            --card-text: #2a2a2f;
-            --card-text-muted: #4a4a55;
+            --card-text: #1a1a22;
+            --card-text-muted: #35353f;
             --text: #c8c8d0;
             --text-muted: #8a8a98;
             --btn-bg: rgba(240, 232, 228, 0.85);
@@ -106,7 +106,7 @@
         .hero h1 {
             font-family: var(--heading);
             font-size: clamp(2.6rem, 6vw, 3.8rem);
-            font-weight: 400;
+            font-weight: 700;
             line-height: 1.12;
             margin-bottom: 2rem;
             color: var(--card-text);
@@ -164,7 +164,7 @@
         .section-heading {
             font-family: var(--heading);
             font-size: clamp(1.8rem, 4vw, 2.6rem);
-            font-weight: 400;
+            font-weight: 700;
             color: var(--card-text);
             margin-bottom: 1.5rem;
             line-height: 1.15;
@@ -178,11 +178,11 @@
             margin-top: 2rem;
         }
         .stat-card {
-            background: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
+            background: rgba(175, 175, 190, 0.35);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 2rem 1.5rem;
             text-align: center;
         }
@@ -190,13 +190,13 @@
             font-family: var(--heading);
             font-size: clamp(2rem, 4vw, 2.8rem);
             font-weight: 400;
-            color: #e2e2ea;
+            color: #1a1a22;
             line-height: 1;
             margin-bottom: 0.75rem;
         }
         .stat-label {
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: var(--card-text-muted);
             line-height: 1.45;
         }
 
