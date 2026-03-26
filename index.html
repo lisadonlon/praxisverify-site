@@ -19,8 +19,8 @@
         /* ── Variables ── */
         :root {
             --bg: #1e2028;
-            --surface: rgba(195, 195, 210, 0.75);
-            --surface-solid: rgba(180, 180, 192, 0.60);
+            --surface: rgba(210, 212, 220, 0.52);
+            --surface-solid: rgba(210, 212, 220, 0.52);
             --border: rgba(255, 255, 255, 0.08);
             --card-text: #151518;
             --card-text-muted: #35353f;
@@ -177,11 +177,12 @@
             margin-top: 2rem;
         }
         .stat-card {
-            background: rgba(175, 175, 190, 0.35);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: var(--surface);
+            backdrop-filter: blur(20px) saturate(1.2);
+            -webkit-backdrop-filter: blur(20px) saturate(1.2);
             border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
             padding: 2rem 1.5rem;
             text-align: center;
         }
