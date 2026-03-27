@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PraxisVerify — The Expert-in-the-Loop Platform for Life Science Compliance</title>
+    <title>PraxisVerify — Expert Verification for Life Sciences</title>
     <meta name="description" content="PraxisVerify connects life sciences companies to pre-vetted regulatory experts through a secure, auditable platform. From 6 months to 48 hours.">
     <meta property="og:title" content="PraxisVerify — Expert Verification for Life Science Compliance">
     <meta property="og:description" content="Pre-vetted regulatory experts. Zero-trust security. 21 CFR Part 11 audit trails. From months to days.">
@@ -12,14 +12,48 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="PraxisVerify — Expert Verification for Life Science Compliance">
     <meta name="twitter:description" content="Pre-vetted regulatory experts. Zero-trust security. 21 CFR Part 11 audit trails.">
+    <meta property="og:image" content="https://praxisverify.com/img/secure-viewer.png">
+    <meta property="og:image:width" content="1456">
+    <meta property="og:image:height" content="816">
+    <meta name="twitter:image" content="https://praxisverify.com/img/secure-viewer.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
     <link rel="canonical" href="https://praxisverify.com/">
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCNYQKTP9W"></script>
+    <!-- Google Analytics (GA4) with Consent Mode v2 -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        // Default: deny all cookies until user consents
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCNYQKTP9W"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-HCNYQKTP9W');
+
+        // Check for previous consent
+        if (localStorage.getItem('cookie_consent') === 'granted') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookie_consent', 'granted');
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+            document.getElementById('cookie-banner').remove();
+        }
+        function declineCookies() {
+            localStorage.setItem('cookie_consent', 'denied');
+            document.getElementById('cookie-banner').remove();
+        }
     </script>
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -61,8 +95,8 @@
         /* ── Variables ── */
         :root {
             --bg: #1e2028;
-            --surface: rgba(218, 218, 226, 0.52);
-            --surface-solid: rgba(218, 218, 226, 0.52);
+            --surface: rgba(232, 232, 240, 0.72);
+            --surface-solid: rgba(232, 232, 240, 0.72);
             --border: rgba(255, 255, 255, 0.08);
             --card-text: #151518;
             --card-text-muted: #35353f;
@@ -429,6 +463,83 @@
         }
         .footer-links a:hover { color: var(--card-text); }
 
+        /* ── Cookie banner ── */
+        .cookie-banner {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 99;
+            background: rgba(232, 232, 240, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            padding: 1.25rem 1.75rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            max-width: 620px;
+            width: calc(100% - 2rem);
+        }
+        .cookie-banner p {
+            font-size: 0.82rem;
+            color: var(--card-text-muted);
+            line-height: 1.5;
+            margin: 0;
+            flex: 1;
+        }
+        .cookie-btns {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+        .cookie-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-family: var(--body);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        .cookie-accept {
+            background: var(--btn-bg);
+            color: var(--btn-text);
+        }
+        .cookie-accept:hover { background: rgba(250, 242, 238, 0.95); }
+        .cookie-decline {
+            background: transparent;
+            color: var(--card-text-muted);
+        }
+        .cookie-decline:hover { color: var(--card-text); }
+
+        @media (max-width: 480px) {
+            .cookie-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+        }
+
+        /* ── Skip link ── */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            padding: 8px 16px;
+            z-index: 100;
+            border-radius: 0 0 8px 0;
+            font-size: 0.85rem;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* ── Spacer ── */
         .section-gap { height: 2rem; }
         .section-gap-lg { height: 3.5rem; }
@@ -480,6 +591,9 @@
     <rect width="100%" height="100%" fill="url(#cube)"/>
 </svg>
 
+<!-- Skip link for accessibility -->
+<a href="#problem" class="skip-link">Skip to main content</a>
+
 <!-- ════════════════════ HERO ════════════════════ -->
 <section class="hero">
     <div class="container">
@@ -495,6 +609,7 @@
 </section>
 
 <!-- ════════════════════ STATS (dark bg) ════════════════════ -->
+<main id="main-content">
 <section id="problem">
     <div class="container">
         <div class="stats-row fade-in">
@@ -521,7 +636,7 @@
     <div class="container">
         <div class="glass-card fade-in">
             <h2 class="section-heading">Why Trust Can't Be Automated</h2>
-            <p class="trust-body">In highly regulated industries like MedTech and Pharma, current advances such as AI have the power to accelerate innovation, but regulatory rigor demands human oversight. Slow contracting and onboarding solutions make complying with regulatory requirements protracted and expensive.<br><br>PraxisVerify eliminates this bottleneck. We are building a secure platform that ensures your information verification steps are:</p>
+            <p class="trust-body">In highly regulated industries like MedTech and Pharma, current advances such as AI have the power to accelerate innovation, but regulatory rigor demands human oversight. Slow contracting and onboarding solutions make complying with regulatory requirements protracted and expensive.<br><br>PraxisVerify eliminates this bottleneck. We are building a secure, purpose-built platform that streamlines expert engagement and ensures your critical document verification steps are:</p>
             <ul class="pillars">
                 <li>
                     <svg class="pillar-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
@@ -619,23 +734,31 @@
 
 <div class="section-gap"></div>
 
+</main>
+
 <!-- ════════════════════ FOOTER ════════════════════ -->
-<section class="footer-section">
+<footer class="footer-section">
     <div class="container">
         <div class="glass-card fade-in">
-            <a href="mailto:lisa@praxisverify.com" class="footer-email">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </a>
             <p class="footer-copy">&copy; 2026 PraxisVerify Ltd. All rights reserved.</p>
             <div class="footer-links">
-                <a href="mailto:lisa@praxisverify.com">lisa@praxisverify.com</a>
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:lisa@praxisverify.com?subject=Privacy%20Policy%20Request">Privacy Policy</a>
             </div>
         </div>
     </div>
-</section>
+</footer>
 
 <div class="section-gap-lg"></div>
+
+<!-- ── Cookie consent banner ── -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>We use cookies for anonymous analytics to improve this site. No personal data is collected.</p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
 
 <!-- ── Scroll animation (IntersectionObserver) ── -->
 <script>
@@ -654,6 +777,12 @@
             });
         }, { threshold: 0.1 });
         els.forEach(function (el) { observer.observe(el); });
+
+        // Show cookie banner if no choice recorded
+        if (!localStorage.getItem('cookie_consent')) {
+            var banner = document.getElementById('cookie-banner');
+            if (banner) banner.style.display = '';
+        }
     });
 </script>
 </body>
