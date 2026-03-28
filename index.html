@@ -12,11 +12,11 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="PraxisVerify — Expert Verification for Life Science Compliance">
     <meta name="twitter:description" content="Pre-vetted regulatory experts. Zero-trust security. 21 CFR Part 11 audit trails.">
-    <meta property="og:image" content="https://praxisverify.com/img/secure-viewer.png">
-    <meta property="og:image:width" content="1456">
-    <meta property="og:image:height" content="816">
-    <meta name="twitter:image" content="https://praxisverify.com/img/secure-viewer.png">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%92%3C/text%3E%3C/svg%3E">
+    <meta property="og:image" content="https://praxisverify.com/img/pvlogo.png">
+    <meta property="og:image:width" content="960">
+    <meta property="og:image:height" content="960">
+    <meta name="twitter:image" content="https://praxisverify.com/img/pvlogo.png">
+    <link rel="icon" type="image/png" href="img/pvlogo.png">
     <link rel="canonical" href="https://praxisverify.com/">
     <!-- Google Analytics (GA4) with Consent Mode v2 -->
     <script>
@@ -94,16 +94,16 @@
 
         /* ── Variables ── */
         :root {
-            --bg: #1e2028;
-            --surface: rgba(232, 232, 240, 0.72);
-            --surface-solid: rgba(232, 232, 240, 0.72);
+            --bg: #0f172a;
+            --surface: rgba(235, 238, 248, 0.82);
+            --surface-solid: rgba(235, 238, 248, 0.82);
             --border: rgba(255, 255, 255, 0.08);
-            --card-text: #151518;
+            --card-text: #1e293b;
             --card-text-muted: #35353f;
             --text: #c8c8d0;
             --text-muted: #8a8a98;
-            --btn-bg: rgba(240, 232, 228, 0.85);
-            --btn-text: #3a3a42;
+            --btn-bg: #6366f1;
+            --btn-text: #ffffff;
             --heading: 'EB Garamond', 'Georgia', serif;
             --body: 'Inter', 'Segoe UI', sans-serif;
         }
@@ -179,6 +179,16 @@
             max-width: 700px;
             margin: 0 auto;
         }
+        .hero-logo {
+            width: 112px;
+            height: 112px;
+            margin-bottom: 2rem;
+        }
+        .hero-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
         .hero h1 {
             font-family: var(--heading);
             font-size: clamp(2.6rem, 6vw, 3.8rem);
@@ -214,9 +224,9 @@
             text-decoration: none;
         }
         .scroll-btn:hover {
-            background: rgba(250, 242, 238, 0.95);
+            background: #4f46e5;
             transform: translateY(-1px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
             text-decoration: none;
         }
         .scroll-btn svg {
@@ -402,8 +412,8 @@
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         }
         .cta-primary:hover {
-            background: rgba(250, 242, 238, 0.95);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            background: #4f46e5;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
         }
         .cta-secondary {
             background: rgba(0, 0, 0, 0.06);
@@ -509,7 +519,7 @@
             background: var(--btn-bg);
             color: var(--btn-text);
         }
-        .cookie-accept:hover { background: rgba(250, 242, 238, 0.95); }
+        .cookie-accept:hover { background: #4f46e5; }
         .cookie-decline {
             background: transparent;
             color: var(--card-text-muted);
@@ -576,16 +586,16 @@
     <defs>
         <pattern id="cube" width="112" height="194" patternUnits="userSpaceOnUse">
             <!-- Isometric cube outlines -->
-            <path d="M56 0 L112 32 L112 96 L56 128 L0 96 L0 32 Z" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M56 128 L56 64 L0 32" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M56 64 L112 32" fill="none" stroke="#9090a0" stroke-width="0.8"/>
+            <path d="M56 0 L112 32 L112 96 L56 128 L0 96 L0 32 Z" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 128 L56 64 L0 32" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 64 L112 32" fill="none" stroke="#334155" stroke-width="0.8"/>
             <!-- Offset row -->
-            <path d="M0 96 L56 128 L56 192 L0 224" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M112 96 L56 128 L56 192 L112 224" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M56 192 L0 160" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M56 192 L112 160" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M0 96 L0 160 L56 192" fill="none" stroke="#9090a0" stroke-width="0.8"/>
-            <path d="M112 96 L112 160 L56 192" fill="none" stroke="#9090a0" stroke-width="0.8"/>
+            <path d="M0 96 L56 128 L56 192 L0 224" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M112 96 L56 128 L56 192 L112 224" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 192 L0 160" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 192 L112 160" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M0 96 L0 160 L56 192" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M112 96 L112 160 L56 192" fill="none" stroke="#334155" stroke-width="0.8"/>
         </pattern>
     </defs>
     <rect width="100%" height="100%" fill="url(#cube)"/>
@@ -598,6 +608,9 @@
 <section class="hero">
     <div class="container">
         <div class="glass-card fade-in">
+            <div class="hero-logo">
+                <img src="img/pvlogo.png" alt="PraxisVerify" width="44" height="44">
+            </div>
             <h1>The Expert&#8209;in&#8209;the&#8209;Loop Platform for Auditable Compliance</h1>
             <p class="subtitle">We provide the secure, compliant bridge connecting your Life Science documentation to certified human expertise for verification.</p>
             <a href="#problem" class="scroll-btn">
