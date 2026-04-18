@@ -10,20 +10,22 @@ The public face of the company — single-page landing site plus social/SEO asse
 
 | Layer | Choice | Notes |
 |-------|--------|-------|
-| Markup | Plain HTML | `index.html` — 825 lines, inline `<style>` block |
+| Markup | Plain HTML | `index.html` (~920 lines) + `privacy.html`, inline `<style>` blocks |
 | Styles | Inline CSS | No external stylesheet, no Tailwind, no preprocessor |
-| Scripts | Inline JS | Minimal — nav toggle, smooth scroll |
+| Scripts | Inline JS | Nav show/hide on scroll, fade-in observer, cookie consent |
 | Hosting | GitHub Pages | `CNAME` file points to `praxisverify.com` |
-| CDN | GitHub Pages default | No Cloudflare, no custom CDN |
+| CDN | GitHub Pages default | Cloudflare recommended — see `CLOUDFLARE-SETUP.md` |
 
 ## File Map
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Single-page site (hero, features, pricing, contact) |
+| `index.html` | Main page (hero, stats, trust, solution, about, beta CTA, contact footer) |
+| `privacy.html` | GDPR-compliant privacy/cookie policy (dark theme, glass cards) |
 | `CNAME` | Custom domain: `praxisverify.com` |
 | `robots.txt` | Crawler rules |
-| `sitemap.xml` | Search engine sitemap |
+| `sitemap.xml` | Search engine sitemap (index + privacy) |
+| `CLOUDFLARE-SETUP.md` | Instructions for adding Cloudflare security headers |
 | `favicon-{32,64,180}.png` | Favicons (standard + Apple touch icon) |
 | `social-card-1200x630.png` | Open Graph card for link previews |
 | `logo-stacked-*.png`, `mark-*.png`, `pvlogowhitebg.png` | Logo variants |
@@ -46,9 +48,23 @@ Brand assets (logos, colours, favicons, social card) are **shared** with the Pra
 
 No CI. No build. No preview environment. GitHub Pages serves `index.html` directly from the repo root.
 
+## Security
+
+- **CSP meta tag** in `index.html` `<head>` — covers inline scripts/styles, GA4, Google Fonts
+- **Cloudflare** not yet enabled — `CLOUDFLARE-SETUP.md` has step-by-step instructions for HTTP security headers (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy)
+
+## SEO / E-E-A-T
+
+- Fixed nav bar (appears on scroll) with internal anchor links: Problem → Solution → About → Beta → Contact
+- About section with founder bio (Lisa Donlon)
+- Visible author byline + datePublished in footer
+- Structured data: Organization + WebPage schemas with datePublished/dateModified
+- Privacy page cross-linked from footer and sitemap
+
 ## Working on the Site
 
 - Edit `index.html` directly — the CSS is in the `<style>` block, the JS is inline at the bottom.
+- `privacy.html` has its own inline CSS (subset of index.html styles). Keep visual consistency.
 - Check the site still renders on mobile (hero breaks below ~640px need the existing media queries).
 - If adding a new page, remember to update `sitemap.xml` and add internal links from `index.html`.
 - Run `squirrelscan` for an SEO audit if making substantive content changes (see `squirrel.toml`).
