@@ -18,6 +18,7 @@
     <meta name="twitter:image" content="https://praxisverify.com/img/social-card.png">
     <link rel="icon" type="image/png" href="img/pvlogo.png">
     <link rel="canonical" href="https://praxisverify.com/">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com;">
     <!-- Google Analytics (GA4) with Consent Mode v2 -->
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -93,7 +94,7 @@
         "description": "PraxisVerify connects life sciences companies to pre-vetted regulatory experts through a secure, auditable platform.",
         "url": "https://praxisverify.com",
         "datePublished": "2025-09-01",
-        "dateModified": "2026-03-30",
+        "dateModified": "2026-04-18",
         "author": {
             "@type": "Person",
             "name": "Lisa Donlon"
@@ -104,16 +105,13 @@
         }
     }
     </script>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <link rel="preload" href="img/pvlogo.png" as="image">
     <style>
-        /* ── Reset ── */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        /* ── Variables ── */
         :root {
             --bg: #0f172a;
             --surface: rgba(235, 238, 248, 0.82);
@@ -129,7 +127,6 @@
             --body: 'Inter', 'Segoe UI', sans-serif;
         }
 
-        /* ── Base ── */
         html { scroll-behavior: smooth; }
         body {
             font-family: var(--body);
@@ -142,7 +139,6 @@
         a { color: inherit; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* ── Hexagonal SVG background ── */
         .bg-pattern {
             position: fixed;
             inset: 0;
@@ -151,7 +147,6 @@
             pointer-events: none;
         }
 
-        /* ── Layout ── */
         .container {
             max-width: 880px;
             margin: 0 auto;
@@ -164,7 +159,6 @@
             padding: 1.5rem 0;
         }
 
-        /* ── Fade-in animation ── */
         .fade-in {
             opacity: 0;
             transform: translateY(24px);
@@ -175,7 +169,6 @@
             transform: translateY(0);
         }
 
-        /* ── Frosted glass card (matches Carrd) ── */
         .glass-card {
             background: var(--surface);
             backdrop-filter: blur(20px) saturate(1.2);
@@ -187,7 +180,6 @@
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
         }
 
-        /* ── Hero ── */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -259,7 +251,6 @@
             60% { transform: translateY(2px); }
         }
 
-        /* ── Section titles (on dark bg) ── */
         .section-heading-dark {
             font-family: var(--heading);
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
@@ -268,7 +259,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* ── Section titles (on card) ── */
         .section-heading {
             font-family: var(--heading);
             font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -280,7 +270,6 @@
             transform-origin: top left;
         }
 
-        /* ── Problem section — stat cards ── */
         .stats-row {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -311,7 +300,6 @@
             line-height: 1.45;
         }
 
-        /* ── "Why Trust" section (inside card) ── */
         .trust-section .glass-card {
             padding: 4rem 3.5rem;
         }
@@ -350,7 +338,6 @@
             letter-spacing: 0.12em;
         }
 
-        /* ── Solution features (inside card) ── */
         .features-list {
             list-style: none;
             margin-top: 2rem;
@@ -391,7 +378,6 @@
             line-height: 1.55;
         }
 
-        /* ── Beta CTA section ── */
         .beta-section .glass-card {
             text-align: left;
         }
@@ -456,10 +442,18 @@
             opacity: 1;
         }
 
-        /* ── Footer (inside card) ── */
         .footer-section .glass-card {
             text-align: center;
             padding: 3rem 2.5rem;
+        }
+        .footer-contact-label {
+            font-family: var(--body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--card-text-muted);
+            margin-bottom: 0.75rem;
         }
         .footer-email {
             display: inline-flex;
@@ -493,8 +487,67 @@
             transition: color 0.3s;
         }
         .footer-links a:hover { color: var(--card-text); }
+        .footer-updated {
+            font-size: 0.75rem;
+            color: var(--card-text-muted);
+            margin-top: 0.75rem;
+            opacity: 0.7;
+        }
+        .author-byline {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 1rem 0 0;
+        }
 
-        /* ── Cookie banner ── */
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 0;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        .site-nav.visible { transform: translateY(0); }
+        .site-nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .nav-brand img { width: 28px; height: 28px; }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); text-decoration: none; }
+        @media (max-width: 480px) {
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.75rem; }
+            .nav-brand span { display: none; }
+        }
+
         .cookie-banner {
             position: fixed;
             bottom: 1.5rem;
@@ -555,7 +608,6 @@
             }
         }
 
-        /* ── Skip link ── */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -571,11 +623,9 @@
             top: 0;
         }
 
-        /* ── Spacer ── */
         .section-gap { height: 2rem; }
         .section-gap-lg { height: 3.5rem; }
 
-        /* ── Responsive ── */
         @media (max-width: 736px) {
             .glass-card { padding: 2.5rem 2rem; border-radius: 20px; }
             .stats-row {
@@ -625,6 +675,23 @@
 
 <!-- Skip link for accessibility -->
 <a href="#problem" class="skip-link">Skip to main content</a>
+
+<!-- ════════════════════ NAV ════════════════════ -->
+<nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+        <a href="/" class="nav-brand">
+            <img src="img/pvlogo.png" alt="" width="28" height="28">
+            <span>PraxisVerify</span>
+        </a>
+        <div class="nav-links">
+            <a href="#problem">Problem</a>
+            <a href="#solution">Solution</a>
+            <a href="#about">About</a>
+            <a href="#beta">Beta</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
 
 <!-- ════════════════════ HERO ════════════════════ -->
 <section class="hero">
@@ -742,6 +809,18 @@
 
 <div class="section-gap-lg"></div>
 
+<!-- ════════════════════ ABOUT ════════════════════ -->
+<section id="about">
+    <div class="container">
+        <div class="glass-card fade-in">
+            <h2 class="section-heading">About PraxisVerify</h2>
+            <p class="trust-body">PraxisVerify was founded by <strong>Lisa Donlon</strong>, a quality and regulatory professional with over 15 years in the MedTech industry. After years of watching companies struggle with slow, expensive expert engagement for document verification, Lisa set out to build a better way.<br><br>Based in Dublin, Ireland, PraxisVerify is building the secure, compliant bridge between life sciences companies and the certified human expertise they need &mdash; faster, safer, and fully audit-ready.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-gap-lg"></div>
+
 <!-- ════════════════════ BETA CTA ════════════════════ -->
 <section id="beta" class="beta-section">
     <div class="container">
@@ -769,18 +848,23 @@
 
 <div class="section-gap"></div>
 
-<p class="sr-only">Written by Lisa Donlon, Founder & Director of PraxisVerify</p>
+<p class="author-byline">By Lisa Donlon, Founder &amp; Director of PraxisVerify</p>
 </main>
 
 <!-- ════════════════════ FOOTER ════════════════════ -->
-<footer class="footer-section">
+<footer id="contact" class="footer-section">
     <div class="container">
         <div class="glass-card fade-in">
+            <p class="footer-contact-label">Contact</p>
+            <a href="mailto:lisa@praxisverify.com" class="footer-email" aria-label="Email PraxisVerify">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
             <p class="footer-copy">&copy; 2026 PraxisVerify Ltd. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="mailto:lisa@praxisverify.com?subject=Privacy%20Policy%20Request">Privacy Policy</a>
+                <a href="/privacy.html">Privacy Policy</a>
             </div>
+            <p class="footer-updated">Last updated <time datetime="2026-04-18">April 2026</time></p>
         </div>
     </div>
 </footer>
@@ -818,6 +902,18 @@
         if (!localStorage.getItem('cookie_consent')) {
             var banner = document.getElementById('cookie-banner');
             if (banner) banner.style.display = '';
+        }
+
+        // Show nav after scrolling past hero
+        var nav = document.querySelector('.site-nav');
+        if (nav) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > window.innerHeight * 0.6) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+            });
         }
     });
 </script>

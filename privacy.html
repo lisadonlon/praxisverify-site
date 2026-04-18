@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — PraxisVerify</title>
+    <meta name="description" content="PraxisVerify privacy and cookie policy. How we handle analytics cookies, contact data, and your GDPR rights.">
+    <link rel="icon" type="image/png" href="img/pvlogo.png">
+    <link rel="canonical" href="https://praxisverify.com/privacy.html">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Privacy Policy — PraxisVerify",
+        "description": "PraxisVerify privacy and cookie policy. How we handle analytics cookies, contact data, and your GDPR rights.",
+        "url": "https://praxisverify.com/privacy.html",
+        "datePublished": "2026-04-18",
+        "dateModified": "2026-04-18",
+        "author": {
+            "@type": "Person",
+            "name": "Lisa Donlon"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "PraxisVerify"
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── Reset ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── Variables ── */
+        :root {
+            --bg: #0f172a;
+            --surface: rgba(235, 238, 248, 0.82);
+            --surface-solid: rgba(235, 238, 248, 0.82);
+            --border: rgba(255, 255, 255, 0.08);
+            --card-text: #1e293b;
+            --card-text-muted: #35353f;
+            --text: #c8c8d0;
+            --text-muted: #8a8a98;
+            --btn-bg: #166534;
+            --btn-text: #ffffff;
+            --heading: 'EB Garamond', 'Georgia', serif;
+            --body: 'Inter', 'Segoe UI', sans-serif;
+        }
+
+        /* ── Base ── */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Hexagonal SVG background ── */
+        .bg-pattern {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            opacity: 0.18;
+            pointer-events: none;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Frosted glass card ── */
+        .glass-card {
+            background: var(--surface);
+            backdrop-filter: blur(20px) saturate(1.2);
+            -webkit-backdrop-filter: blur(20px) saturate(1.2);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 4rem 3.5rem;
+            color: var(--card-text);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* ── Header ── */
+        .page-header {
+            padding: 3rem 0 1.5rem;
+        }
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        .header-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .page-title {
+            font-family: var(--heading);
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.25;
+            transform: scaleY(1.15);
+            transform-origin: top left;
+            color: var(--card-text);
+            margin-bottom: 0.5rem;
+        }
+        .page-subtitle {
+            font-size: 0.95rem;
+            color: var(--card-text-muted);
+            line-height: 1.7;
+        }
+
+        /* ── Policy content ── */
+        .policy-section {
+            padding: 1.5rem 0;
+        }
+        .policy-card {
+            margin-bottom: 1.5rem;
+        }
+        .policy-card h2 {
+            font-family: var(--heading);
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 700;
+            color: var(--card-text);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .policy-card h3 {
+            font-family: var(--heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--card-text);
+            margin-bottom: 0.5rem;
+            margin-top: 1.25rem;
+        }
+        .policy-card p {
+            color: var(--card-text-muted);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .policy-card ul {
+            color: var(--card-text-muted);
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .policy-card a {
+            color: var(--btn-bg);
+            text-decoration: underline;
+        }
+        .policy-card a:hover {
+            color: #14532d;
+        }
+
+        /* ── Footer ── */
+        .footer-section {
+            padding: 1.5rem 0 3rem;
+        }
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--card-text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+        }
+        .footer-links a {
+            color: var(--card-text-muted);
+        }
+        .footer-links a:hover {
+            color: var(--card-text);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .glass-card {
+                padding: 2.5rem 1.5rem;
+                border-radius: 18px;
+            }
+            .page-header {
+                padding: 2rem 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Isometric cube grid background -->
+<svg class="bg-pattern" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+    <defs>
+        <pattern id="cube" width="112" height="194" patternUnits="userSpaceOnUse">
+            <path d="M56 0 L112 32 L112 96 L56 128 L0 96 L0 32 Z" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 128 L56 64 L0 32" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 64 L112 32" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M0 96 L56 128 L56 192 L0 224" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M112 96 L56 128 L56 192 L112 224" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 192 L0 160" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M56 192 L112 160" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M0 96 L0 160 L56 192" fill="none" stroke="#334155" stroke-width="0.8"/>
+            <path d="M112 96 L112 160 L56 192" fill="none" stroke="#334155" stroke-width="0.8"/>
+        </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#cube)"/>
+</svg>
+
+<!-- ════════════════════ HEADER ════════════════════ -->
+<header class="page-header">
+    <div class="container">
+        <div class="glass-card">
+            <div class="header-logo">
+                <a href="/"><img src="img/pvlogo.png" alt="PraxisVerify logo" width="80" height="80"></a>
+            </div>
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-subtitle">Last updated <time datetime="2026-04-18">April 2026</time></p>
+        </div>
+    </div>
+</header>
+
+<!-- ════════════════════ POLICY CONTENT ════════════════════ -->
+<main>
+<section class="policy-section">
+    <div class="container">
+
+        <!-- Analytics Cookies -->
+        <div class="glass-card policy-card">
+            <h2>Analytics Cookies</h2>
+            <p>This site uses Google Analytics 4 (GA4) with <strong>Consent Mode v2</strong> to understand how visitors use the site. When you first visit, a cookie banner asks for your consent before any analytics cookies are set.</p>
+
+            <h3>What we collect</h3>
+            <p>Anonymous, aggregated page view data only &mdash; pages visited, approximate geographic region, device type, and referral source. We do <strong>not</strong> collect any personally identifiable information (PII) through analytics.</p>
+
+            <h3>How consent works</h3>
+            <ul>
+                <li>By default, analytics cookies are <strong>denied</strong> until you click "Accept" on the cookie banner.</li>
+                <li>If you decline, GA4 runs in cookieless mode &mdash; no cookies are set and no identifiable data is stored.</li>
+                <li>Your choice is saved in your browser's local storage so you are not asked again.</li>
+            </ul>
+
+            <h3>How to opt out</h3>
+            <p>You can clear your browser's local storage for this site at any time to reset your cookie preference. You can also install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a> to block tracking across all sites.</p>
+        </div>
+
+        <!-- Contact Data -->
+        <div class="glass-card policy-card">
+            <h2>Contact Data</h2>
+            <p>If you email us at <a href="mailto:lisa@praxisverify.com">lisa@praxisverify.com</a>, we store your name and email address solely for the purpose of responding to your enquiry. We do not add you to any mailing list, share your data with third parties, or use it for marketing purposes unless you explicitly request it.</p>
+        </div>
+
+        <!-- Data Rights (GDPR) -->
+        <div class="glass-card policy-card">
+            <h2>Your Data Rights (GDPR)</h2>
+            <p>Under the General Data Protection Regulation, you have the right to:</p>
+            <ul>
+                <li><strong>Access</strong> &mdash; request a copy of any personal data we hold about you.</li>
+                <li><strong>Rectification</strong> &mdash; ask us to correct inaccurate or incomplete data.</li>
+                <li><strong>Erasure</strong> &mdash; ask us to delete your personal data.</li>
+                <li><strong>Restriction</strong> &mdash; ask us to restrict how we process your data.</li>
+                <li><strong>Portability</strong> &mdash; receive your data in a structured, machine-readable format.</li>
+                <li><strong>Complaint</strong> &mdash; lodge a complaint with the <a href="https://www.dataprotection.ie/" target="_blank" rel="noopener">Irish Data Protection Commission</a> (DPC).</li>
+            </ul>
+            <p>To exercise any of these rights, email <a href="mailto:lisa@praxisverify.com">lisa@praxisverify.com</a>.</p>
+        </div>
+
+        <!-- Data Controller -->
+        <div class="glass-card policy-card">
+            <h2>Data Controller</h2>
+            <p><strong>PraxisVerify Ltd</strong><br>
+            Dublin, Ireland<br>
+            <a href="mailto:lisa@praxisverify.com">lisa@praxisverify.com</a></p>
+        </div>
+
+        <!-- Updates -->
+        <div class="glass-card policy-card">
+            <h2>Updates to This Policy</h2>
+            <p>We may update this policy from time to time. Any changes will be posted on this page with a revised "Last updated" date. This policy was last updated in <time datetime="2026-04-18">April 2026</time>.</p>
+        </div>
+
+    </div>
+</section>
+</main>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="glass-card">
+            <p class="footer-copy">&copy; 2026 PraxisVerify Ltd. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
