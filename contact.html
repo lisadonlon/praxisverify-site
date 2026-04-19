@@ -61,7 +61,7 @@
         .bg-pattern { position: fixed; inset: 0; z-index: 0; opacity: 0.18; pointer-events: none; }
         .container { max-width: 880px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
         .glass-card { background: var(--surface); backdrop-filter: blur(20px) saturate(1.2); -webkit-backdrop-filter: blur(20px) saturate(1.2); border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.06); padding: 4rem 3.5rem; color: var(--card-text); box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15); }
-        .page-header { padding: 3rem 0 1.5rem; }
+        .page-header { padding: 5rem 0 1.5rem; }
         .header-logo { width: 80px; height: 80px; margin-bottom: 1.5rem; }
         .header-logo img { width: 100%; height: 100%; object-fit: contain; }
         .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.25; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 0.5rem; }
@@ -86,9 +86,53 @@
         .footer-links a { color: var(--card-text-muted); }
         .footer-links a:hover { color: var(--card-text); }
         .footer-updated { font-size: 0.75rem; color: var(--card-text-muted); margin-top: 0.75rem; opacity: 0.7; }
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 0;
+        }
+        .site-nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .nav-brand img { width: 28px; height: 28px; }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); text-decoration: none; }
         @media (max-width: 640px) {
             .glass-card { padding: 2.5rem 1.5rem; border-radius: 18px; }
             .page-header { padding: 2rem 0 1rem; }
+        }
+        @media (max-width: 480px) {
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.75rem; }
+            .nav-brand span { display: none; }
         }
     </style>
 </head>
@@ -110,6 +154,21 @@
     </defs>
     <rect width="100%" height="100%" fill="url(#cube)"/>
 </svg>
+
+<nav class="site-nav">
+    <div class="container">
+        <a href="/" class="nav-brand">
+            <img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28">
+            <span>PraxisVerify</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+</nav>
 
 <header class="page-header">
     <div class="container">

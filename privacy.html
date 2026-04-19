@@ -97,7 +97,7 @@
         }
 
         .page-header {
-            padding: 3rem 0 1.5rem;
+            padding: 5rem 0 1.5rem;
         }
         .header-logo {
             width: 80px;
@@ -188,6 +188,46 @@
             color: var(--card-text);
         }
 
+        .site-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0.6rem 0;
+        }
+        .site-nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .nav-brand img { width: 28px; height: 28px; }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); text-decoration: none; }
+
         @media (max-width: 640px) {
             .glass-card {
                 padding: 2.5rem 1.5rem;
@@ -196,6 +236,12 @@
             .page-header {
                 padding: 2rem 0 1rem;
             }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.75rem; }
+            .nav-brand span { display: none; }
         }
     </style>
 </head>
@@ -220,6 +266,21 @@
 </svg>
 
 <!-- ════════════════════ HEADER ════════════════════ -->
+<nav class="site-nav">
+    <div class="container">
+        <a href="/" class="nav-brand">
+            <img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28">
+            <span>PraxisVerify</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy Policy</a>
+        </div>
+    </div>
+</nav>
+
 <header class="page-header">
     <div class="container">
         <div class="glass-card">
