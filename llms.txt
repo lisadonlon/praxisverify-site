@@ -1,6 +1,8 @@
-# PraxisVerify — llms.txt
-# https://praxisverify.com
-# Last Updated: 2026-04-19
+# PraxisVerify
+
+> Expert-in-the-Loop verification platform connecting life sciences companies to pre-vetted regulatory experts through a secure, auditable marketplace.
+
+Last Updated: 2026-04-19
 
 ## Core Product
 
@@ -32,7 +34,10 @@ PraxisVerify is an Expert-in-the-Loop verification platform for Life Sciences re
 ## Pages
 
 - Homepage: https://praxisverify.com/
-- About: https://praxisverify.com/about- Contact: https://praxisverify.com/contact- Privacy Policy: https://praxisverify.com/privacy
+- About: https://praxisverify.com/about
+- Contact: https://praxisverify.com/contact
+- Privacy Policy: https://praxisverify.com/privacy
+
 ## Contact
 
 - Email: info@praxisverify.com

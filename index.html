@@ -705,6 +705,17 @@
             .cta-btn { padding: 0.8rem 1rem; font-size: 0.85rem; }
         }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+        .comparison-table th { font-family: var(--heading); font-size: 0.95rem; font-weight: 700; color: var(--card-text); text-align: left; padding: 0.85rem 1rem; border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+        .comparison-table td { font-size: 0.9rem; color: var(--card-text-muted); padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0, 0, 0, 0.06); line-height: 1.55; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table td:first-child { font-weight: 600; color: var(--card-text); white-space: nowrap; }
+        .comparison-table td:last-child { color: var(--btn-bg); font-weight: 500; }
+        .comparison-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        @media (max-width: 640px) {
+            .comparison-table th, .comparison-table td { padding: 0.6rem 0.75rem; font-size: 0.82rem; }
+        }
     </style>
 </head>
 <body>
@@ -821,6 +832,45 @@
         <div class="glass-card fade-in">
             <h2 class="section-heading">What We're Building</h2>
             <p class="trust-body">A secure marketplace connecting life sciences companies to pre-vetted regulatory experts. Upload documents to a zero-trust environment. Experts review in-browser &mdash; no downloads, no email, no risk.</p>
+            <div class="comparison-table-wrap">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>Traditional Approach</th>
+                            <th>PraxisVerify</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Expert Onboarding</td>
+                            <td>3&ndash;6 months per client</td>
+                            <td>48 hours (one-time credentialing)</td>
+                        </tr>
+                        <tr>
+                            <td>Document Security</td>
+                            <td>Email attachments, downloads</td>
+                            <td>Zero-trust in-browser review</td>
+                        </tr>
+                        <tr>
+                            <td>Audit Trail</td>
+                            <td>Manual logs, spreadsheets</td>
+                            <td>Automated 21 CFR Part 11 compliant</td>
+                        </tr>
+                        <tr>
+                            <td>Vendor Qualification</td>
+                            <td>Repeated per engagement</td>
+                            <td>One-time platform credentialing</td>
+                        </tr>
+                        <tr>
+                            <td>Document Retention</td>
+                            <td>Varies by provider</td>
+                            <td>Automatic 90-day deletion</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <ul class="features-list">
                 <li>
                     <div class="feature-icon">
