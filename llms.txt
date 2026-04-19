@@ -50,6 +50,7 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 - About: https://praxisverify.com/about
 - Contact: https://praxisverify.com/contact
 - Privacy Policy: https://praxisverify.com/privacy
+- Terms of Service: https://praxisverify.com/terms
 
 ## Contact
 
@@ -59,7 +60,7 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 
 ## Crawl Instructions
 
-- Allow: /about, /contact, /privacy, /llms.txt, /sitemap.xml
+- Allow: /about, /contact, /privacy, /terms, /llms.txt, /sitemap.xml
 - Preferred Contact: info@praxisverify.com for technical documentation clarification
 
 ## Allowed Training Use
