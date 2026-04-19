@@ -10,7 +10,7 @@ The public face of the company — single-page landing site plus social/SEO asse
 
 | Layer | Choice | Notes |
 |-------|--------|-------|
-| Markup | Plain HTML | `index.html` (~920 lines) + `privacy.html`, inline `<style>` blocks |
+| Markup | Plain HTML | `index.html` (~920 lines) + `about.html`, `contact.html`, `privacy.html` |
 | Styles | Inline CSS | No external stylesheet, no Tailwind, no preprocessor |
 | Scripts | Inline JS | Nav show/hide on scroll, fade-in observer, cookie consent |
 | Hosting | GitHub Pages | `CNAME` file points to `praxisverify.com` |
@@ -21,10 +21,12 @@ The public face of the company — single-page landing site plus social/SEO asse
 | File | Purpose |
 |------|---------|
 | `index.html` | Main page (hero, stats, trust, solution, about, beta CTA, contact footer) |
+| `about.html` | Dedicated about page (AboutPage schema, founder bio, mission, services) |
+| `contact.html` | Contact page (ContactPage schema, demo CTA, email, LinkedIn, expert signup) |
 | `privacy.html` | GDPR-compliant privacy/cookie policy (dark theme, glass cards) |
 | `CNAME` | Custom domain: `praxisverify.com` |
 | `robots.txt` | Crawler rules |
-| `sitemap.xml` | Search engine sitemap (index + privacy) |
+| `sitemap.xml` | Search engine sitemap (index, about, contact, privacy) |
 | `CLOUDFLARE-SETUP.md` | Instructions for adding Cloudflare security headers |
 | `favicon-{32,64,180}.png` | Favicons (standard + Apple touch icon) |
 | `social-card-1200x630.png` | Open Graph card for link previews |
@@ -51,20 +53,22 @@ No CI. No build. No preview environment. GitHub Pages serves `index.html` direct
 ## Security
 
 - **CSP meta tag** in `index.html` `<head>` — covers inline scripts/styles, GA4, Google Fonts
-- **Cloudflare** not yet enabled — `CLOUDFLARE-SETUP.md` has step-by-step instructions for HTTP security headers (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy)
+- **Cloudflare** enabled — HTTP security headers (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, CSP) via Transform Rules
 
 ## SEO / E-E-A-T
 
-- Fixed nav bar (appears on scroll) with internal anchor links: Problem → Solution → About → Beta → Contact
-- About section with founder bio (Lisa Donlon)
-- Visible author byline + datePublished in footer
-- Structured data: Organization + WebPage schemas with datePublished/dateModified
-- Privacy page cross-linked from footer and sitemap
+- Fixed nav bar (appears on scroll) with links: Problem → Solution → About → Beta → Contact
+- Dedicated pages: about.html (AboutPage), contact.html (ContactPage), privacy.html (WebPage)
+- About section on homepage with founder bio (Lisa Donlon)
+- Visible author byline + datePublished on all pages
+- Structured data: Organization, WebPage, WebSite, FAQPage, AboutPage, ContactPage schemas
+- `llms.txt` at site root for AI crawler guidance
+- All pages cross-linked via footer and sitemap
 
 ## Working on the Site
 
 - Edit `index.html` directly — the CSS is in the `<style>` block, the JS is inline at the bottom.
-- `privacy.html` has its own inline CSS (subset of index.html styles). Keep visual consistency.
+- `about.html`, `contact.html`, `privacy.html` each have their own inline CSS (subset of index.html styles). Keep visual consistency across all pages.
 - Check the site still renders on mobile (hero breaks below ~640px need the existing media queries).
 - If adding a new page, remember to update `sitemap.xml` and add internal links from `index.html`.
 - Run `squirrelscan` for an SEO audit if making substantive content changes (see `squirrel.toml`).
