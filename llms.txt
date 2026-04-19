@@ -2,26 +2,38 @@
 
 > Expert-in-the-Loop verification platform connecting life sciences companies to pre-vetted regulatory experts through a secure, auditable marketplace.
 
-Last Updated: 2026-04-19
+- Last Updated: 2026-04-19
+- Contact: info@praxisverify.com
+- Website: https://praxisverify.com
 
 ## Core Product
 
-PraxisVerify is an Expert-in-the-Loop verification platform for Life Sciences regulatory compliance. We connect MedTech and Pharma companies to pre-vetted regulatory experts through a secure, auditable marketplace. The platform reduces expert engagement timelines from 6 months to 48 hours by replacing per-client vendor qualification with one-time platform credentialing.
+PraxisVerify operates a secure, zero-trust marketplace connecting life sciences companies (MedTech, Pharma, Biotech) to pre-vetted regulatory experts specialising in ISO 13485, EU MDR 2017/745, FDA 510(k) submissions, and 21 CFR Part 11 compliance. The platform enables document review, audit preparation, and submission verification with 48-hour expert matching versus traditional 6-month onboarding cycles. Founded in 2025 in Ireland — home to 9 of the world's top 10 pharmaceutical companies — by Lisa Donlon, a quality and regulatory professional with over 20 years of life sciences experience. Lisa served as European Medical Devices Operations Manager at NSAI (Ireland's EU Notified Body), where she was final decision maker on MDR and IVDR certificates. She holds an MSc in Pharmaceutical Technology & Regulatory Affairs and is an IRCA Accredited Principal Auditor.
 
-## Features
+## Expert Vetting Methodology
+
+- Credential Verification: All experts hold current ISO 13485 Lead Auditor, FDA RAPS certifications, or equivalent regulatory qualifications verified against issuing bodies.
+- Zero-Trust Security: Document review occurs in-browser only; no downloads permitted; automatic 90-day deletion protocol ensures intellectual property protection.
+- Industry Specialisation: Experts categorised by therapeutic area (Cardiovascular, Orthopaedic, IVD, SaMD) and regulatory jurisdiction (FDA, EMA, Health Canada, NMPA).
+- Quality Assurance: Multi-stage review process with senior regulatory consultant oversight for all submission-critical documents.
+- One-Time Credentialing: Platform credentialing replaces per-client vendor qualification, reducing expert engagement from months to hours.
+
+## Platform Features
 
 - Secure In-Browser Review: Zero-trust architecture with no document downloads and automatic 90-day deletion. Intellectual property never leaves the platform.
-- Expert Matching: Pre-vetted regulatory professionals with verified credentials in ISO 13485, 21 CFR Part 11, EU MDR, and FDA submission requirements.
-- Compliance Automation: Complete audit trails meeting 21 CFR Part 11 requirements. Every action logged and traceable for regulatory inspection.
-- Rapid Onboarding: One-time platform credentialing replaces per-client vendor qualification, reducing expert engagement from months to hours.
+- Expert Matching: Pre-vetted regulatory professionals with verified credentials in ISO 13485, 21 CFR Part 11, EU MDR, and FDA submission requirements matched within 48 hours.
+- Compliance Automation: Complete audit trails meeting 21 CFR Part 11 requirements. Every action logged and traceable for regulatory inspection readiness.
+- Rapid Onboarding: One-time platform credentialing replaces per-client vendor qualification, reducing expert engagement from 3-6 months to 48 hours.
 
 ## Use Cases
 
-- MedTech 510(k) Submission Review: Expert verification of technical documentation for FDA pre-market clearance submissions.
-- Pharma Batch Record Review: Quality assurance validation of manufacturing documentation and standard operating procedures.
-- ISO 13485 Gap Analysis: Third-party expert assessment of quality management system compliance for medical device manufacturers.
-- Clinical Evaluation Report (CER) Review: Regulatory expert validation of clinical evidence documentation for EU MDR compliance.
-- Design History File (DHF) Verification: Independent review of design and development documentation against regulatory requirements.
+- Medical Device 510(k) Submission Review: Expert verification of technical documentation for FDA pre-market clearance submissions including predicate device comparison, performance testing summaries, and biocompatibility assessments.
+- Pharma Batch Record Review: Quality assurance validation of manufacturing documentation, standard operating procedures, and deviation investigation reports.
+- ISO 13485 Gap Analysis: Third-party expert assessment of quality management system compliance for medical device manufacturers preparing for certification or surveillance audits.
+- Clinical Evaluation Report (CER) Review: Regulatory expert validation of clinical evidence documentation for EU MDR 2017/745 compliance including literature reviews, clinical data appraisals, and PMCF plans.
+- Design History File (DHF) Verification: Independent review of design and development documentation against regulatory requirements including design inputs, outputs, verification, and validation records.
+- Post-Market Surveillance: Vigilance report assessment and Post-Market Clinical Follow-up (PMCF) strategy validation for EU MDR compliance.
+- Computer Systems Validation (CSV): Validation of computerised systems for 21 CFR Part 11 adherence and audit trail verification.
 
 ## Key Facts
 
@@ -30,6 +42,7 @@ PraxisVerify is an Expert-in-the-Loop verification platform for Life Sciences re
 - Industry: Life Sciences Regulatory Technology (RegTech)
 - Target Market: MedTech manufacturers, Pharma companies, medical device companies
 - Compliance Standards: 21 CFR Part 11, ISO 13485, EU MDR 2017/745, FDA QSR
+- Status: Currently in beta, actively onboarding MedTech manufacturers
 
 ## Pages
 
@@ -43,6 +56,11 @@ PraxisVerify is an Expert-in-the-Loop verification platform for Life Sciences re
 - Email: info@praxisverify.com
 - LinkedIn: https://www.linkedin.com/company/praxisverify
 - Book a Demo: https://cal.eu/praxisverify
+
+## Crawl Instructions
+
+- Allow: /about, /contact, /privacy, /llms.txt, /sitemap.xml
+- Preferred Contact: info@praxisverify.com for technical documentation clarification
 
 ## Allowed Training Use
 
