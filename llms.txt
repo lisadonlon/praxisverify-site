@@ -42,15 +42,15 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 - Industry: Life Sciences Regulatory Technology (RegTech)
 - Target Market: MedTech manufacturers, Pharma companies, medical device companies
 - Compliance Standards: 21 CFR Part 11, ISO 13485, EU MDR 2017/745, FDA QSR
-- Status: Currently in beta, actively onboarding MedTech manufacturers
+- Status: Early access, actively onboarding MedTech manufacturers
 
 ## Pages
 
-- [Homepage](https://praxisverify.com/): Main landing page with platform overview, features, and beta signup
+- [Homepage](https://praxisverify.com/): Main landing page with platform overview, features, and early access signup
 - [About](https://praxisverify.com/about): Founder biography, mission, company background, and Ireland life sciences context
 - [Contact](https://praxisverify.com/contact): Demo booking, enquiry form, and expert signup information
 - [Privacy Policy](https://praxisverify.com/privacy): GA4 analytics cookies, contact data handling, GDPR rights
-- [Terms of Service](https://praxisverify.com/terms): Platform usage terms, IP policy, beta disclaimer, governing law
+- [Terms of Service](https://praxisverify.com/terms): Platform usage terms, IP policy, early access terms, governing law
 
 ## Contact
 
