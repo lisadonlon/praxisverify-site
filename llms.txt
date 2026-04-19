@@ -4,7 +4,7 @@
 
 - Last Updated: 2026-04-19
 - Contact: info@praxisverify.com
-- Website: https://praxisverify.com
+- Website: [https://praxisverify.com](https://praxisverify.com)
 
 ## Core Product
 
@@ -46,19 +46,28 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 
 ## Pages
 
-- Homepage: https://praxisverify.com/
-- About: https://praxisverify.com/about
-- Contact: https://praxisverify.com/contact
-- Privacy Policy: https://praxisverify.com/privacy
-- Terms of Service: https://praxisverify.com/terms
+- [Homepage](https://praxisverify.com/): Main landing page with platform overview, features, and beta signup
+- [About](https://praxisverify.com/about): Founder biography, mission, company background, and Ireland life sciences context
+- [Contact](https://praxisverify.com/contact): Demo booking, enquiry form, and expert signup information
+- [Privacy Policy](https://praxisverify.com/privacy): GA4 analytics cookies, contact data handling, GDPR rights
+- [Terms of Service](https://praxisverify.com/terms): Platform usage terms, IP policy, beta disclaimer, governing law
 
 ## Contact
 
-- Email: info@praxisverify.com
-- LinkedIn: https://www.linkedin.com/company/praxisverify
-- Book a Demo: https://cal.eu/praxisverify
+- Email: [info@praxisverify.com](mailto:info@praxisverify.com)
+- LinkedIn: [PraxisVerify](https://www.linkedin.com/company/praxisverify)
+- Founder LinkedIn: [Lisa Donlon](https://www.linkedin.com/in/lisadonlon)
+- Founder Consultancy: [Donlon Life Science Consulting](https://donlonlsc.com)
+- Book a Demo: [cal.eu/praxisverify](https://cal.eu/praxisverify)
+
+## Optional
+
+- [Sitemap](https://praxisverify.com/sitemap.xml)
+- [Video: Leveraging AI in Medical Device Quality & Regulatory Workflows](https://www.youtube.com/watch?v=jVcL4iNC8iM): Lisa Donlon presentation on Leap Compliance channel
 
 ## Crawl Instructions
+
+All pages and content are available for AI crawler access. No restrictions.
 
 - Allow: /about, /contact, /privacy, /terms, /llms.txt, /sitemap.xml
 - Preferred Contact: info@praxisverify.com for technical documentation clarification
