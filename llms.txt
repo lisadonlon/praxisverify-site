@@ -32,10 +32,7 @@ PraxisVerify is an Expert-in-the-Loop verification platform for Life Sciences re
 ## Pages
 
 - Homepage: https://praxisverify.com/
-- About: https://praxisverify.com/about.html
-- Contact: https://praxisverify.com/contact.html
-- Privacy Policy: https://praxisverify.com/privacy.html
-
+- About: https://praxisverify.com/about- Contact: https://praxisverify.com/contact- Privacy Policy: https://praxisverify.com/privacy
 ## Contact
 
 - Email: info@praxisverify.com
