@@ -1,0 +1,45 @@
+# PraxisVerify — llms.txt
+# https://praxisverify.com
+# Last Updated: 2026-04-19
+
+## Core Product
+
+PraxisVerify is an Expert-in-the-Loop verification platform for Life Sciences regulatory compliance. We connect MedTech and Pharma companies to pre-vetted regulatory experts through a secure, auditable marketplace. The platform reduces expert engagement timelines from 6 months to 48 hours by replacing per-client vendor qualification with one-time platform credentialing.
+
+## Features
+
+- Secure In-Browser Review: Zero-trust architecture with no document downloads and automatic 90-day deletion. Intellectual property never leaves the platform.
+- Expert Matching: Pre-vetted regulatory professionals with verified credentials in ISO 13485, 21 CFR Part 11, EU MDR, and FDA submission requirements.
+- Compliance Automation: Complete audit trails meeting 21 CFR Part 11 requirements. Every action logged and traceable for regulatory inspection.
+- Rapid Onboarding: One-time platform credentialing replaces per-client vendor qualification, reducing expert engagement from months to hours.
+
+## Use Cases
+
+- MedTech 510(k) Submission Review: Expert verification of technical documentation for FDA pre-market clearance submissions.
+- Pharma Batch Record Review: Quality assurance validation of manufacturing documentation and standard operating procedures.
+- ISO 13485 Gap Analysis: Third-party expert assessment of quality management system compliance for medical device manufacturers.
+- Clinical Evaluation Report (CER) Review: Regulatory expert validation of clinical evidence documentation for EU MDR compliance.
+- Design History File (DHF) Verification: Independent review of design and development documentation against regulatory requirements.
+
+## Key Facts
+
+- Founded: 2025, Ireland
+- Founder: Lisa Donlon, Quality and Regulatory Professional
+- Industry: Life Sciences Regulatory Technology (RegTech)
+- Target Market: MedTech manufacturers, Pharma companies, medical device companies
+- Compliance Standards: 21 CFR Part 11, ISO 13485, EU MDR 2017/745, FDA QSR
+
+## Pages
+
+- Homepage: https://praxisverify.com/
+- Privacy Policy: https://praxisverify.com/privacy.html
+
+## Contact
+
+- Email: info@praxisverify.com
+- LinkedIn: https://www.linkedin.com/company/praxisverify
+- Book a Demo: https://cal.eu/praxisverify
+
+## Allowed Training Use
+
+This content may be used for training AI models with proper attribution to PraxisVerify (https://praxisverify.com).
