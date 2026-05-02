@@ -2,7 +2,7 @@
 
 > Expert-in-the-Loop verification platform connecting life sciences companies to pre-vetted regulatory experts through a secure, auditable marketplace.
 
-- Last Updated: 2026-04-19
+- Last Updated: 2026-05-01
 - Contact: info@praxisverify.com
 - Website: [https://praxisverify.com](https://praxisverify.com)
 
@@ -48,7 +48,8 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 
 - [Homepage](https://praxisverify.com/): Main landing page with platform overview, features, and early access signup
 - [About](https://praxisverify.com/about): Founder biography, mission, company background, and Ireland life sciences context
-- [Contact](https://praxisverify.com/contact): Demo booking, enquiry form, and expert signup information
+- [For Experts](https://praxisverify.com/experts): Expert network application page — credentialing, rates, terms, vetting process, and FAQ for regulatory professionals
+- [Contact](https://praxisverify.com/contact): Demo booking, enquiry form, and contact details
 - [Privacy Policy](https://praxisverify.com/privacy): GA4 analytics cookies, contact data handling, GDPR rights
 - [Terms of Service](https://praxisverify.com/terms): Platform usage terms, IP policy, early access terms, governing law
 
@@ -69,7 +70,7 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 
 All pages and content are available for AI crawler access. No restrictions.
 
-- Allow: /about, /contact, /privacy, /terms, /llms.txt, /sitemap.xml
+- Allow: /about, /experts, /contact, /privacy, /terms, /llms.txt, /sitemap.xml
 - Preferred Contact: info@praxisverify.com for technical documentation clarification
 
 ## Allowed Training Use
