@@ -14,7 +14,7 @@
     <meta name="twitter:title" content="Contact PraxisVerify">
     <meta name="twitter:description" content="Book a demo or get in touch to discuss regulatory document verification for life sciences.">
     <link rel="icon" type="image/png" href="img/pvlogo.png">
-    <meta name="date" content="2026-04-19">
+    <meta name="date" content="2026-05-15">
     <link rel="canonical" href="https://praxisverify.com/contact">
     <link rel="help" type="text/plain" href="https://praxisverify.com/llms.txt" title="LLM site info">
     <link rel="preload" href="img/pvlogo.png" as="image">
@@ -26,7 +26,7 @@
         "description": "Contact PraxisVerify to learn how our Expert-in-the-Loop platform can streamline your regulatory document verification.",
         "url": "https://praxisverify.com/contact",
         "datePublished": "2026-04-19",
-        "dateModified": "2026-04-19",
+        "dateModified": "2026-05-15",
         "author": {
             "@type": "Person",
             "name": "Lisa Donlon"
@@ -86,7 +86,7 @@
         .page-header { padding: 5rem 0 1.5rem; }
         .header-logo { width: 80px; height: 80px; margin-bottom: 1.5rem; }
         .header-logo img { width: 100%; height: 100%; object-fit: contain; }
-        .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.25; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 0.5rem; }
+        .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.5; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 1.25rem; }
         .page-subtitle { font-size: 0.95rem; color: var(--card-text-muted); line-height: 1.7; }
         .content-section { padding: 1.5rem 0; }
         .content-card { margin-bottom: 1.5rem; }
@@ -104,6 +104,12 @@
         .contact-detail p { color: var(--card-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0; }
         .cta-btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.9rem 2rem; border-radius: 50px; font-family: var(--body); font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; text-decoration: none; border: none; background: var(--btn-bg); color: var(--btn-text); box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); margin-top: 1rem; }
         .cta-btn:hover { background: #14532d; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(22, 101, 52, 0.35); text-decoration: none; }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+        .cta-row .cta-btn { margin-top: 0; }
+        .cta-btn.cta-outline { background: transparent; color: var(--btn-bg); border: 1.5px solid var(--btn-bg); box-shadow: none; }
+        .cta-btn.cta-outline:hover { background: var(--btn-bg); color: var(--btn-text); border-color: var(--btn-bg); }
+        .lead-card .lead-title { font-family: var(--heading); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: var(--card-text); margin-bottom: 0.5rem; }
+        .lead-card .lead-sub { color: var(--card-text-muted); margin-bottom: 0.5rem; font-size: 1rem; line-height: 1.7; }
         .footer-section { padding: 1.5rem 0 3rem; }
         .footer-copy { font-size: 0.85rem; color: var(--card-text-muted); margin-bottom: 0.5rem; }
         .footer-links { display: flex; gap: 1.5rem; font-size: 0.85rem; flex-wrap: wrap; }
@@ -149,13 +155,22 @@
             transition: color 0.2s;
         }
         .nav-links a:hover { color: var(--text); text-decoration: none; }
+        .nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 0.4rem; width: 40px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         @media (max-width: 640px) {
             .glass-card { padding: 2.5rem 1.5rem; border-radius: 18px; }
             .page-header { padding: 2rem 0 1rem; }
+            .nav-toggle { display: flex; }
+            .site-nav .container { position: relative; }
+            .nav-links { position: absolute; top: calc(100% + 0.6rem); right: 0; left: 0; flex-direction: column; gap: 0; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0 2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+            .nav-links.is-open { max-height: 80vh; padding: 0.5rem 2rem; }
+            .nav-links a { display: block; padding: 0.85rem 0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .nav-links a:last-child { border-bottom: none; }
         }
         @media (max-width: 480px) {
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.75rem; }
             .nav-brand span { display: none; }
         }
     </style>
@@ -185,7 +200,10 @@
             <img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28">
             <span>PraxisVerify</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="toggleNav(this)">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
             <a href="/#problem">Problem</a>
             <a href="/#solution">Solution</a>
             <a href="/about">About</a>
@@ -204,7 +222,7 @@
             </div>
             <h1 class="page-title">Contact Us</h1>
             <p class="page-subtitle">Get in touch to discuss how PraxisVerify can streamline your regulatory document verification.</p>
-            <p class="page-subtitle" style="margin-top:0.5rem;font-size:0.85rem;opacity:0.7">Last updated <time datetime="2026-04-19">April 2026</time></p>
+            <p class="page-subtitle" style="margin-top:0.5rem;font-size:0.85rem;opacity:0.7">Last updated <time datetime="2026-05-15">May 2026</time></p>
         </div>
     </div>
 </header>
@@ -216,6 +234,16 @@
 <section class="content-section">
     <div class="container">
 
+        <div class="glass-card content-card lead-card">
+            <p class="lead-title">Two ways to reach us</p>
+            <p class="lead-sub">Most enquiries land in one of two buckets. Pick the one that fits.</p>
+            <div class="cta-row">
+                <a href="https://cal.eu/praxisverify" class="cta-btn" target="_blank" rel="noopener">Book a 20-min demo</a>
+                <a href="mailto:info@praxisverify.com?subject=PraxisVerify%20-%20Enquiry" class="cta-btn cta-outline">Email us</a>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--card-text-muted); margin-top: 1rem; margin-bottom: 0;">Applying as a regulatory expert? Go straight to <a href="/experts">our experts page</a> &mdash; that route is separate.</p>
+        </div>
+
         <div class="glass-card content-card">
             <h2>Book a Demo</h2>
             <p>See the platform in action. Book a free 20-minute walkthrough and we'll show you how PraxisVerify reduces expert engagement from months to hours. During the demo, we'll walk through the secure document review workflow, show you how expert matching works, and explain how the audit trail is designed to support 21 CFR Part 11 requirements.</p>
@@ -224,8 +252,8 @@
         </div>
 
         <div class="glass-card content-card">
-            <h2>Get in Touch</h2>
-            <p>We welcome enquiries from MedTech manufacturers, pharmaceutical companies, and regulatory professionals. Whether you have a question about the platform, want to discuss a specific compliance challenge, or are interested in partnership opportunities, we'd love to hear from you.</p>
+            <h2>Client Enquiries</h2>
+            <p>We welcome enquiries from MedTech manufacturers, pharmaceutical companies, and other life sciences sponsors. Whether you have a question about the platform, want to discuss a specific compliance challenge, or are interested in partnership opportunities, get in touch.</p>
 
             <div class="contact-method">
                 <div class="contact-icon">
@@ -251,6 +279,15 @@
         </div>
 
         <div class="glass-card content-card">
+            <h2>For Regulatory Experts</h2>
+            <p>If you're a regulatory professional considering joining the PraxisVerify expert network, the expert journey runs through a separate page &mdash; with the credentialing model, scope, rates, insurance, and conflict of interest workflow set out in full.</p>
+            <div class="cta-row">
+                <a href="/experts" class="cta-btn">For Experts &mdash; full details</a>
+                <a href="mailto:info@praxisverify.com?subject=PraxisVerify%20-%20Expert%20Network%20Application" class="cta-btn cta-outline">Apply as an expert</a>
+            </div>
+        </div>
+
+        <div class="glass-card content-card">
             <h2>Common Use Cases</h2>
             <p>Companies typically reach out when they need expert support for:</p>
             <ul>
@@ -272,6 +309,7 @@
 
     </div>
 </section>
+</article>
 </main>
 
 <footer class="footer-section">
@@ -285,10 +323,14 @@
                 <a href="/terms">Terms of Service</a>
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <p class="footer-updated">Last updated <time datetime="2026-04-19">April 2026</time></p>
+            <p class="footer-updated">Last updated <time datetime="2026-05-15">May 2026</time></p>
         </div>
     </div>
 </footer>
 
+<script>
+function toggleNav(btn){var menu=document.getElementById('nav-menu');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);menu.classList.toggle('is-open');}
+document.addEventListener('click',function(e){var menu=document.getElementById('nav-menu');var btn=document.querySelector('.nav-toggle');if(!menu||!btn)return;if(menu.classList.contains('is-open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}});
+</script>
 </body>
 </html>

@@ -26,7 +26,7 @@
         "description": "PraxisVerify was founded by Lisa Donlon to build a secure, compliant bridge between life sciences companies and certified regulatory experts.",
         "url": "https://praxisverify.com/about",
         "datePublished": "2026-04-19",
-        "dateModified": "2026-04-19",
+        "dateModified": "2026-05-15",
         "author": {
             "@type": "Person",
             "name": "Lisa Donlon"
@@ -132,7 +132,7 @@
         .page-header { padding: 5rem 0 1.5rem; }
         .header-logo { width: 80px; height: 80px; margin-bottom: 1.5rem; }
         .header-logo img { width: 100%; height: 100%; object-fit: contain; }
-        .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.25; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 0.5rem; }
+        .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.5; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 1.25rem; }
         .page-subtitle { font-size: 0.95rem; color: var(--card-text-muted); line-height: 1.7; }
         .content-section { padding: 1.5rem 0; }
         .content-card { margin-bottom: 1.5rem; }
@@ -190,13 +190,22 @@
             transition: color 0.2s;
         }
         .nav-links a:hover { color: var(--text); text-decoration: none; }
+        .nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 0.4rem; width: 40px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         @media (max-width: 640px) {
             .glass-card { padding: 2.5rem 1.5rem; border-radius: 18px; }
             .page-header { padding: 2rem 0 1rem; }
+            .nav-toggle { display: flex; }
+            .site-nav .container { position: relative; }
+            .nav-links { position: absolute; top: calc(100% + 0.6rem); right: 0; left: 0; flex-direction: column; gap: 0; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0 2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+            .nav-links.is-open { max-height: 80vh; padding: 0.5rem 2rem; }
+            .nav-links a { display: block; padding: 0.85rem 0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .nav-links a:last-child { border-bottom: none; }
         }
         @media (max-width: 480px) {
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.75rem; }
             .nav-brand span { display: none; }
         }
     </style>
@@ -226,7 +235,10 @@
             <img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28">
             <span>PraxisVerify</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="toggleNav(this)">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
             <a href="/#problem">Problem</a>
             <a href="/#solution">Solution</a>
             <a href="/about">About</a>
@@ -256,7 +268,7 @@
         <div class="glass-card content-card">
             <h2>Our Mission</h2>
             <p>PraxisVerify is building the secure, compliant bridge between life sciences companies and the certified human expertise they need. In an industry where AI can draft documents faster than ever, regulators still require human expert verification. We provide that critical link &mdash; faster, safer, and designed for regulatory inspection readiness.</p>
-            <p>The current process for engaging regulatory experts is broken. Companies spend months on vendor qualification, QMS onboarding, and contractual negotiations before a single document gets reviewed. PraxisVerify replaces this with one-time platform credentialing, reducing expert engagement from months to as little as 48 hours.</p>
+            <p>The current process for engaging regulatory experts is broken. Companies spend months on vendor qualification, Quality Management System (QMS) onboarding, and contractual negotiations before a single document gets reviewed. PraxisVerify replaces this with one-time platform credentialing, reducing expert engagement from months to as little as 48 hours.</p>
             <p>This is happening in a market where skills scarcity is already acute: Skillnet Ireland's <em>Talent Landscape 2025</em> found that 58% of businesses report difficulty sourcing skills, and 59% expect their core skill requirements to evolve within the next three years.</p>
             <p>The challenge is compounded by the regulatory environment itself. The EU MDR transition &mdash; which moved the medical device regulatory framework from the Medical Devices Directive (MDD) to the Medical Devices Regulation (EU 2017/745) &mdash; has fundamentally increased the documentation burden on manufacturers. Clinical Evaluation Reports, Post-Market Clinical Follow-up plans, Periodic Safety Update Reports, and Summary of Safety and Clinical Performance documents are now mandatory for a wider range of devices. These are lifecycle obligations &mdash; they don't end at certification. Every device on the market requires ongoing post-market surveillance, periodic clinical data updates, and vigilance reporting for as long as it remains available.</p>
             <p>For companies navigating this landscape, access to qualified regulatory expertise is not a convenience &mdash; it's a prerequisite for market access and ongoing compliance. PraxisVerify exists to make that access faster, safer, and auditable.</p>
@@ -342,10 +354,14 @@
                 <a href="/terms">Terms of Service</a>
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <p class="footer-updated">Last updated <time datetime="2026-04-19">April 2026</time></p>
+            <p class="footer-updated">Last updated <time datetime="2026-05-15">May 2026</time></p>
         </div>
     </div>
 </footer>
 
+<script>
+function toggleNav(btn){var menu=document.getElementById('nav-menu');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);menu.classList.toggle('is-open');}
+document.addEventListener('click',function(e){var menu=document.getElementById('nav-menu');var btn=document.querySelector('.nav-toggle');if(!menu||!btn)return;if(menu.classList.contains('is-open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}});
+</script>
 </body>
 </html>
