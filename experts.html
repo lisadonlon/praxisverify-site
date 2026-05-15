@@ -14,7 +14,7 @@
     <meta name="twitter:title" content="For Experts — Join the PraxisVerify Network">
     <meta name="twitter:description" content="Credential once. Work across multiple clients. Apply to join the PraxisVerify network of pre-vetted regulatory experts.">
     <link rel="icon" type="image/png" href="img/pvlogo.png">
-    <meta name="date" content="2026-05-02">
+    <meta name="date" content="2026-05-15">
     <link rel="canonical" href="https://praxisverify.com/experts">
     <link rel="help" type="text/plain" href="https://praxisverify.com/llms.txt" title="LLM site info">
     <link rel="preload" href="img/pvlogo.png" as="image">
@@ -26,7 +26,7 @@
         "description": "Application page for regulatory professionals interested in joining the PraxisVerify expert network.",
         "url": "https://praxisverify.com/experts",
         "datePublished": "2026-05-01",
-        "dateModified": "2026-05-02",
+        "dateModified": "2026-05-15",
         "author": {
             "@type": "Person",
             "name": "Lisa Donlon"
@@ -100,50 +100,66 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Is there a minimum number of assignments per month?",
+                "name": "Is there a minimum time commitment to stay in the expert network?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "No. There is no floor. You stay in the active network as long as your credentials are current."
+                    "text": "No. There is no floor on assignments per month or quarter. Experts work fully on-demand and remain in the active network as long as their credentials are current."
                 }
             },
             {
                 "@type": "Question",
-                "name": "How quickly will I be matched after credentialing?",
+                "name": "How are rates set?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Match velocity depends on demand for your declared specialisms. We're transparent about pipeline depth at credentialing — if your specialism is currently low-demand, you'll know."
+                    "text": "The platform calculates a project rate per assignment based on the complexity of the work — document type, scope, depth of review required. Additional fees apply for expedited turnaround, re-reviews, and formal signatures. There is no rate haggling per engagement; the rate is set when the assignment is matched."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What happens if a client disputes my assessment?",
+                "name": "Can I still take on direct consulting work outside the platform?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Your annotations, review comments, and any add-on sign-off are preserved in the audit trail. Disputes are handled through a documented review process; you retain the right to defend your professional opinion. Regulatory submissions remain the sponsor's responsibility — your role is qualified independent verification, not authorship."
+                    "text": "Yes. There is no exclusivity. Experts continue to run their own practice and accept PraxisVerify assignments as they choose. The platform handles only the work that flows through it."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can I see what an assignment looks like before accepting?",
+                "name": "How is conflict of interest handled?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. You see scope, document type, estimated effort, calculated rate, and any add-on fee triggers before you accept. You can decline without penalty — and you should, if your expertise isn't a clean fit for the assignment. We'd rather reassign than have a marginal match."
+                    "text": "PraxisVerify assignments are document annotation and review only. That narrow scope means broader consulting or QA/RA work an expert does directly with the same client is generally not in conflict — the platform engagement is bounded. Experts see the client name (or, where confidentiality is requested on early-stage submissions, at minimum the sector and jurisdiction) before accepting an assignment, and may decline without penalty if a prior relationship makes the engagement inappropriate. Ongoing COI is managed through declaration — if a client later puts an expert on retainer, the expert pauses matching against that client and completes in-flight work to a documented hand-off point."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Where can experts be based at launch?",
+                "name": "Do I need professional indemnity insurance?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ireland on day one. Geographic expansion will follow client demand in other jurisdictions."
+                    "text": "Yes. PraxisVerify carries platform-level professional indemnity cover, and each expert must also carry their own PI insurance. Proof of cover is part of credentialing. The two policies cover different things — platform-level cover sits behind the platform itself; individual PI sits behind the expert's professional judgement on a given assignment. Most MedTech consultant PI policies cover document review delivered through a platform, but cover wording varies between insurers and an endorsement is sometimes needed."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What about IP and confidentiality?",
+                "name": "How long are client documents retained?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Document IP remains the client's. Your assessment work product is governed by the platform NDA. No client documents leave the secure environment, and all are auto-deleted after 90 days."
+                    "text": "Client documents and expert review work product are auto-deleted 90 days after the end of the project, not 90 days after upload. Long or slow-moving projects therefore do not trigger early deletion — the retention clock starts at project close. Extensions for specific submissions can be requested in writing before the deletion window."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a platform fee, and how is the rate set?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The platform calculates a project rate per assignment based on document type, page count, depth-of-review tier, regulatory pathway, and any expedited turnaround flag. A platform fee is deducted from the project rate — the deduction is disclosed to the expert at credentialing. There is no per-engagement rate haggling; the rate is set when the assignment is matched and shown to the expert before acceptance."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where can experts be based?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ireland at launch. Geographic expansion will follow demand from clients in other jurisdictions."
                 }
             }
         ]
@@ -179,7 +195,7 @@
         .page-header { padding: 5rem 0 1.5rem; }
         .header-logo { width: 80px; height: 80px; margin-bottom: 1.5rem; }
         .header-logo img { width: 100%; height: 100%; object-fit: contain; }
-        .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.25; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 0.75rem; }
+        .page-title { font-family: var(--heading); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.5; transform: scaleY(1.15); transform-origin: top left; color: var(--card-text); margin-bottom: 1.5rem; }
         .page-subtitle { font-size: 1rem; color: var(--card-text-muted); line-height: 1.7; padding-left: 1rem; border-left: 2px solid var(--accent-platform); }
         .content-section { padding: 1.5rem 0; }
         .content-card { margin-bottom: 1.5rem; }
@@ -217,6 +233,11 @@
         .nav-links { display: flex; gap: 1.5rem; list-style: none; }
         .nav-links a { font-size: 0.82rem; color: var(--text-muted); font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover { color: var(--text); text-decoration: none; }
+        .nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 0.4rem; width: 40px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
         .apply-card { text-align: center; }
         .apply-card .cta-btn { font-size: 1rem; padding: 1rem 2.25rem; }
         .apply-note { font-size: 0.8rem; color: var(--card-text-muted); margin-top: 1rem; }
@@ -227,10 +248,14 @@
             .flow-step { flex-direction: row; text-align: left; gap: 1rem; padding: 0; align-items: flex-start; }
             .flow-step::after { top: 48px; left: 23px; right: auto; bottom: calc(-100% + 48px); width: 1px; height: auto; }
             .flow-num { margin-bottom: 0; flex-shrink: 0; }
+            .nav-toggle { display: flex; }
+            .site-nav .container { position: relative; }
+            .nav-links { position: absolute; top: calc(100% + 0.6rem); right: 0; left: 0; flex-direction: column; gap: 0; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0 2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+            .nav-links.is-open { max-height: 80vh; padding: 0.5rem 2rem; }
+            .nav-links a { display: block; padding: 0.85rem 0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .nav-links a:last-child { border-bottom: none; }
         }
         @media (max-width: 480px) {
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.75rem; }
             .nav-brand span { display: none; }
         }
     </style>
@@ -260,7 +285,10 @@
             <img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28">
             <span>PraxisVerify</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="toggleNav(this)">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
             <a href="/#problem">Problem</a>
             <a href="/#solution">Solution</a>
             <a href="/about">About</a>
@@ -292,8 +320,8 @@
             <p>If you've consulted in MedTech or Pharma, you already know the shape of the problem. Every new client repeats the same cycle:</p>
             <ul>
                 <li>3&ndash;6 months of vendor qualification, supplier questionnaires, and management sign-off before the first piece of work.</li>
-                <li>NDAs, DPAs, and confidentiality agreements negotiated bilaterally for each engagement.</li>
-                <li>QMS onboarding and company-specific training, often duplicated across overlapping standards you already know cold.</li>
+                <li>Non-disclosure agreements (NDAs), data processing agreements (DPAs), and confidentiality agreements negotiated bilaterally for each engagement.</li>
+                <li>Quality Management System (QMS) onboarding and company-specific training, often duplicated across overlapping standards you already know cold.</li>
                 <li>Document exchange via email, ad-hoc shared drives, or whatever tool the client happens to use &mdash; with no audit trail, no version control, and unclear retention.</li>
             </ul>
             <p>The result: significant unbillable time per client, unpredictable pipeline, and administrative overhead that scales worse than the work itself. PraxisVerify is built to fix the engagement layer so you can do the work you're qualified for.</p>
@@ -302,12 +330,24 @@
         <div class="glass-card content-card">
             <h2>What You Get</h2>
             <ul>
-                <li><strong>Defined scope</strong> &mdash; assignments are document annotation and review through the platform. Broader consulting, drafting, and QA/RA work continue through your own practice.</li>
+                <li><strong>Defined scope</strong> &mdash; assignments are document annotation and review through the platform. Broader consulting, drafting, and quality assurance / regulatory affairs (QA/RA) work continue through your own practice.</li>
                 <li><strong>One credentialing process</strong> &mdash; verified once against issuing bodies (IRCA, RAPS, CQI and equivalents), then available for matching across every client on the platform. Client-specific QMS training runs automatically per assignment, before you access any documents &mdash; no per-client onboarding cycle.</li>
                 <li><strong>A secure, audit-ready environment built for the work</strong> &mdash; in-browser document review, no downloads, every action logged with timestamps, designed to support 21 CFR Part 11 electronic records requirements.</li>
                 <li><strong>Demand brought to you</strong> &mdash; matched to assignments that fit your declared specialisms. No cold outreach, no proposal-writing, no procurement portals.</li>
-                <li><strong>Predictable, complexity-based rates</strong> &mdash; the platform calculates a project rate per assignment based on document type and scope, with additional fees for expedited turnaround, re-reviews, and signatures. No haggling per engagement.</li>
+                <li><strong>Predictable, complexity-based rates</strong> &mdash; the platform calculates a project rate per assignment based on document type and scope, with additional fees for expedited turnaround time (TAT), re-reviews, and signatures. No haggling per engagement. A platform fee is deducted from the project rate; the deduction is disclosed to you at credentialing.</li>
                 <li><strong>No exclusivity, no minimum commitment</strong> &mdash; continue your own practice, accept PraxisVerify assignments as they suit your schedule.</li>
+                <li><strong>A track record that travels</strong> &mdash; completed assignments build a verified history on the platform. A performance and reputation layer visible to clients is on the platform roadmap, so early contributors compound the credibility of their work.</li>
+            </ul>
+        </div>
+
+        <div class="glass-card content-card">
+            <h2>What Kind of Work Flows Through the Platform</h2>
+            <p>So you can self-select in or out before applying:</p>
+            <ul>
+                <li><strong>Client profile</strong> &mdash; early-stage to mid-stage MedTech manufacturers and <abbr title="In Vitro Diagnostic">IVD</abbr> companies, EU- and US-focused, with active submissions or live <abbr title="Quality Management System">QMS</abbr> obligations. Pharma and combination-product manufacturers from launch year two.</li>
+                <li><strong>Typical assignment types</strong> &mdash; Clinical Evaluation Reports (CERs), Design History File (DHF) sections, 510(k) packages and Additional Information (AI) responses, Notified Body deficiency responses, internal audit reports, Post-Market Surveillance (PMS) and Post-Market Clinical Follow-up (PMCF) documents, technical documentation packages for EU MDR / IVDR conformity routes.</li>
+                <li><strong>Typical assignment size</strong> &mdash; bounded, document-anchored reviews. Most assignments are scoped to a single document or document set rather than open-ended consulting engagements. Most assignments sit above a minimum project value disclosed at credentialing.</li>
+                <li><strong>What we do not source through the platform</strong> &mdash; full <abbr title="Quality Assurance / Regulatory Affairs">QA/RA</abbr> placements, ongoing regulatory consulting retainers, training delivery, project / stakeholder management roles, and inspection readiness coaching. These are valuable services &mdash; they are not what the platform engagement model is built for.</li>
             </ul>
         </div>
 
@@ -319,7 +359,7 @@
                     <div class="flow-num">1</div>
                     <div class="flow-text">
                         <div class="flow-title">Apply</div>
-                        <p class="flow-desc">Tell us your credentials, specialisms, and PI insurance details.</p>
+                        <p class="flow-desc">Tell us your credentials, specialisms, and professional indemnity (PI) insurance details.</p>
                     </div>
                 </li>
                 <li class="flow-step">
@@ -349,47 +389,92 @@
         <div class="glass-card content-card">
             <h2>Who We're Looking For</h2>
             <p>Competency-gated, not years-of-experience-gated. What matters is that you can demonstrate the credential and the practice. Specialisms in demand at launch:</p>
+            <h3>Quality systems &amp; audit</h3>
             <ul>
                 <li>ISO 13485 lead auditor qualifications</li>
-                <li>Internal audit programmes across QMS standards (ISO 13485, FDA QSR / QMSR, ISO 14971, ISO 14155)</li>
-                <li>EU MDR / IVDR regulatory affairs</li>
-                <li>FDA submissions (510(k), PMA, De Novo)</li>
+                <li>Internal audit programmes across QMS standards (ISO 13485, FDA Quality System Regulation / Quality Management System Regulation (QSR / QMSR), ISO 14971, ISO 14155)</li>
+                <li>Medical Device Single Audit Program (MDSAP) audit experience</li>
+            </ul>
+            <h3>Regulatory submissions &amp; review responses</h3>
+            <ul>
+                <li>EU Medical Device Regulation / In Vitro Diagnostic Regulation (MDR / IVDR) regulatory affairs</li>
+                <li>FDA submissions: 510(k), Premarket Approval (PMA), De Novo</li>
                 <li>FDA Additional Information (AI) response preparation</li>
                 <li>Notified Body deficiency / review-question response preparation (MDR, IVDR)</li>
-                <li>21 CFR Part 11 / computer systems validation</li>
-                <li>Design controls, Design History Files, and technical documentation</li>
+            </ul>
+            <h3>Product safety &amp; standards</h3>
+            <ul>
+                <li>Product safety &amp; compliance (IEC 60601 series, applicable harmonised standards)</li>
+                <li>Standards identification &amp; applicability review</li>
+                <li>Labelling and instructions for use (IFU) review</li>
+                <li>Electromagnetic compatibility (EMC) and safety test plan review</li>
+            </ul>
+            <h3>Design, software &amp; clinical</h3>
+            <ul>
+                <li>21 CFR Part 11 / computer systems validation (CSV)</li>
+                <li>Design controls, Design History Files (DHF), and technical documentation</li>
+                <li>Software as a Medical Device (SaMD) and AI/ML regulatory</li>
                 <li>Clinical investigation plans and study protocols</li>
                 <li>Clinical evaluation plans and reports (CEP / CER)</li>
                 <li>IVD performance evaluation plans and reports (PEP / PER)</li>
-                <li>Post-market surveillance, vigilance, PMCF / PMPF</li>
-                <li>MDSAP audit experience</li>
-                <li>SaMD and AI/ML regulatory</li>
-                <li>Standalone disciplines applicable across all jurisdictions: biostatistics, biocompatibility, sterility, human factors / usability engineering</li>
+                <li>Post-market surveillance (PMS), vigilance, Post-Market Clinical Follow-up (PMCF), Post-Market Performance Follow-up (PMPF)</li>
             </ul>
-            <p>Adjacent or emerging specialisms not on this list? Apply anyway and tell us &mdash; the demand mix evolves with the client base.</p>
+            <h3>Standalone disciplines (applicable across jurisdictions)</h3>
+            <ul>
+                <li>Biostatistics, biocompatibility, sterility, human factors / usability engineering</li>
+            </ul>
+            <p>Adjacent or emerging specialisms not on this list? Apply anyway and tell us &mdash; the demand mix evolves with the client base. Training delivery, soft skills, and project / stakeholder management profiles are not part of the launch network &mdash; the platform engagement model is scoped to document annotation and review.</p>
         </div>
 
         <div class="glass-card content-card">
             <h2>Rates &amp; Terms</h2>
-            <p><strong>Project rate per assignment.</strong> The platform calculates the rate based on the complexity of the work &mdash; document type, scope, depth of review required. Additional fees apply for:</p>
+            <p><strong>Project rate per assignment.</strong> Rates are not negotiated per engagement &mdash; the platform calculates a project rate before you accept, based on a defined set of complexity inputs:</p>
             <ul>
-                <li>Expedited turnaround</li>
+                <li>Document type (CER, DHF section, 510(k) module, internal audit report, deficiency response, etc.)</li>
+                <li>Page count and structural complexity</li>
+                <li>Depth-of-review tier (high-level appraisal vs. line-by-line technical review)</li>
+                <li>Regulatory pathway and target jurisdiction (EU MDR, FDA, both, etc.)</li>
+                <li>Whether the assignment is flagged for expedited turnaround time (TAT)</li>
+            </ul>
+            <p>You see the calculated rate, the document type, the estimated effort, and any add-on fee triggers <strong>before</strong> you accept. If the rate does not work for you, decline &mdash; without penalty.</p>
+            <p><strong>Add-on fees</strong> apply on top of the base project rate for:</p>
+            <ul>
+                <li>Expedited turnaround time (TAT) inside the standard window</li>
                 <li>Re-reviews following client revisions</li>
                 <li>Formal signatures and sign-off statements</li>
             </ul>
+            <p><strong>Platform fee.</strong> A platform fee is deducted from the project rate &mdash; the deduction is disclosed to you at credentialing. Experts are business owners; we will not ask you to accept assignments without knowing what you receive.</p>
+            <p><strong>Minimum project value.</strong> Most assignments sit above a minimum project value disclosed at credentialing, so high-volume consultants with their own minimums can self-select in or out efficiently.</p>
+            <p><strong>Credentialing cost.</strong> No fee to apply or be credentialed. Time commitment for the credentialing step itself is a short structured submission and verification cycle &mdash; not a multi-week onboarding. The recurring cost on the expert side is your own PI insurance premium (see below).</p>
             <p><strong>No exclusivity.</strong> You continue to run your own practice. PraxisVerify covers only the assignments that flow through the platform.</p>
             <p><strong>No minimum commitment.</strong> Fully on-demand. Stay in the active network as long as your credentials remain current.</p>
         </div>
 
         <div class="glass-card content-card">
             <h2>Insurance &amp; Liability</h2>
-            <p>PraxisVerify carries platform-level professional indemnity cover. Each expert is also required to hold their own professional indemnity insurance &mdash; proof of cover is part of credentialing. This dual-cover model is intentional: it protects you, the client, and the platform, and reflects how regulated-industry consulting works in practice.</p>
+            <p>PraxisVerify carries platform-level professional indemnity (PI) cover. Each expert is also required to hold their own PI insurance &mdash; proof of cover is part of credentialing.</p>
+            <p><strong>Why dual cover?</strong> The two policies cover different things. PraxisVerify's platform-level cover sits behind the platform itself &mdash; the matching engine, the secure environment, the audit trail. Your individual PI sits behind <em>your</em> professional judgement on a given assignment. That separation reflects how regulated-industry consulting works in practice, allocates liability cleanly between platform, expert, and sponsor, and protects all three parties without leaving the client exposed.</p>
+            <p><strong>Does my existing policy cover this work?</strong> Most MedTech consultant PI policies are written broadly enough to cover document review delivered through a platform, but cover scope varies between insurers. Check your wording against "platform-based annotation and review" before applying &mdash; an endorsement may be needed in some cases. We will flag any wording gaps at credentialing rather than assume cover is in place.</p>
         </div>
 
         <div class="glass-card content-card">
             <h2>Conflict of Interest</h2>
-            <p>PraxisVerify assignments are document annotation and review only (with optional sign-off as an add-on). That narrow scope means the broader consulting, drafting, training, or QA/RA work you may do directly with the same client through your own practice is generally not in conflict &mdash; the platform engagement is bounded.</p>
-            <p>Within that scope, apply your professional judgement. If you wouldn't take an annotation or review engagement on in your own practice &mdash; competitor relationships, recent direct involvement with the document or its authors, anything that would compromise independence &mdash; flag it with us before accepting and we will reassign. We treat conflict declarations as a strength, not a problem.</p>
+            <p>PraxisVerify assignments are document annotation and review only (with optional sign-off as an add-on). That narrow scope means the broader consulting, drafting, or QA/RA work you may do directly with the same client through your own practice is generally not in conflict &mdash; the platform engagement is bounded.</p>
+            <p><strong>You see the client before you accept.</strong> Each match shows you the client name (or, where the client has requested confidentiality on early-stage submissions, at minimum the client sector and jurisdiction) before you commit. Decline without penalty if a prior relationship makes the assignment inappropriate. You should &mdash; we would rather reassign than have a marginal independence position.</p>
+            <p><strong>Ongoing COI declarations.</strong> If a client later puts you on retainer, or if you take on consulting work that creates a forward conflict with platform assignments already in progress, declare it. We pause matching against that client, you complete in-flight work to a documented hand-off point, and we route subsequent assignments to other experts. Conflict declarations are treated as a strength, not a problem &mdash; they are evidence the expert is operating to a professional standard.</p>
+            <p>Within scope, apply your professional judgement. If you wouldn't take an annotation or review engagement on in your own practice &mdash; competitor relationships, recent direct involvement with the document or its authors, anything that would compromise independence &mdash; flag it before accepting and we will reassign.</p>
+        </div>
+
+        <div class="glass-card content-card">
+            <h2>Data Security &amp; Confidentiality</h2>
+            <p>The work and the documents you handle are sensitive. Here is who can see what, and for how long.</p>
+            <ul>
+                <li><strong>Access controls.</strong> A client document is visible only to the client who uploaded it and the expert (or experts) assigned to that specific review. There is no general "browse" access for credentialed experts; matching is per-assignment.</li>
+                <li><strong>In-browser only.</strong> Documents are reviewed inside the platform's secure viewer. No downloads, no local copies, no email attachments. Every action &mdash; open, view, annotate, comment &mdash; is logged with a timestamp, supporting 21 CFR Part 11 electronic records requirements.</li>
+                <li><strong>Retention and deletion.</strong> Client documents and review work product are auto-deleted <strong>90 days after the end of the project</strong>. Long or slow-moving projects do not trigger early deletion &mdash; the clock starts at project close, not at upload. If a client needs longer retention for a specific submission, an extension is requested in writing before the deletion window.</li>
+                <li><strong>Sub-processors.</strong> A current list of platform sub-processors and the data they process is published in our Data Processing Agreement (DPA), referenced from the <a href="/privacy">Privacy Policy</a>. Changes are notified to clients in advance.</li>
+                <li><strong>Information security posture.</strong> The platform is built to ISO/IEC 27001 control families and is operating its Information Security Management System (ISMS) toward formal certification. Where formal certification is not yet in place, the operative controls &mdash; access management, encryption in transit and at rest, audit logging, vulnerability management &mdash; are in production and externally reviewable on request.</li>
+            </ul>
         </div>
 
         <div class="glass-card content-card">
@@ -397,10 +482,11 @@
             <p>This is a selective network, not a gig marketplace. The full process:</p>
             <ol>
                 <li><strong>Apply</strong> &mdash; submit credentials, specialisms, references, and proof of PI insurance.</li>
-                <li><strong>Credential verification</strong> &mdash; we verify against the issuing bodies (IRCA, RAPS, CQI, NB alumni networks, and equivalents).</li>
+                <li><strong>Credential verification</strong> &mdash; we verify against the issuing bodies (IRCA, RAPS, CQI, Notified Body alumni networks, and equivalents).</li>
                 <li><strong>Platform onboarding</strong> &mdash; platform NDA, data-handling orientation, in-browser review training. (Client-specific QMS training is automatic per assignment, before document access &mdash; not a separate step here.)</li>
                 <li><strong>First match</strong> &mdash; you appear in the active matching pool for assignments fitting your specialisms.</li>
             </ol>
+            <p><strong>Subcontracting.</strong> Assignments are matched to the credentialed individual expert and cannot be subcontracted or delegated to a third party. The credential, the audit trail, and the professional indemnity cover are all tied to the named expert who accepted the match. If you regularly work with a named associate whose credentials you would want to bring into the network, ask them to apply directly &mdash; we credential individuals, not firms.</p>
         </div>
 
         <div class="glass-card content-card">
@@ -418,11 +504,14 @@
                 <dt>Can I see what an assignment looks like before accepting?</dt>
                 <dd>Yes. You see scope, document type, estimated effort, calculated rate, and any add-on fee triggers before you accept. You can decline without penalty &mdash; and you should, if your expertise isn't a clean fit for the assignment. We'd rather reassign than have a marginal match.</dd>
 
+                <dt>Can I submit a standalone gap document or report instead of inline annotations?</dt>
+                <dd>Inline annotation is the primary review output the platform is built around &mdash; it produces the per-finding audit trail clients and Notified Bodies expect. For assignments where a structured summary report or gap document is more useful than per-line annotation, the platform supports a report-style output attached to the assignment in addition to (not instead of) per-finding entries. Pure free-form report submission, where the only deliverable is a separate document outside the assignment record, is not part of the launch scope.</dd>
+
                 <dt>Where can experts be based at launch?</dt>
                 <dd>Ireland on day one. Geographic expansion will follow client demand in other jurisdictions.</dd>
 
                 <dt>What about IP and confidentiality?</dt>
-                <dd>Document IP remains the client's. Your assessment work product is governed by the platform NDA. No client documents leave the secure environment, and all are auto-deleted after 90 days.</dd>
+                <dd>Document IP remains the client's. Your assessment work product is governed by the platform NDA. No client documents leave the secure environment. Retention and deletion rules are set out in the <strong>Data Security &amp; Confidentiality</strong> section above &mdash; in short, documents are auto-deleted 90 days after the end of the project, not 90 days after upload.</dd>
             </dl>
         </div>
 
@@ -461,10 +550,14 @@
                 <a href="/terms">Terms of Service</a>
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <p class="footer-updated">Last updated <time datetime="2026-05-02">May 2026</time></p>
+            <p class="footer-updated">Last updated <time datetime="2026-05-15">May 2026</time></p>
         </div>
     </div>
 </footer>
 
+<script>
+function toggleNav(btn){var menu=document.getElementById('nav-menu');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);menu.classList.toggle('is-open');}
+document.addEventListener('click',function(e){var menu=document.getElementById('nav-menu');var btn=document.querySelector('.nav-toggle');if(!menu||!btn)return;if(menu.classList.contains('is-open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}});
+</script>
 </body>
 </html>

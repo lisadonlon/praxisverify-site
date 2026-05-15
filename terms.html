@@ -249,6 +249,11 @@
             transition: color 0.2s;
         }
         .nav-links a:hover { color: var(--text); text-decoration: none; }
+        .nav-toggle { display: none; background: transparent; border: none; cursor: pointer; padding: 0.4rem; width: 40px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
         @media (max-width: 640px) {
             .glass-card {
@@ -258,11 +263,15 @@
             .page-header {
                 padding: 2rem 0 1rem;
             }
+            .nav-toggle { display: flex; }
+            .site-nav .container { position: relative; }
+            .nav-links { position: absolute; top: calc(100% + 0.6rem); right: 0; left: 0; flex-direction: column; gap: 0; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0 2rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+            .nav-links.is-open { max-height: 80vh; padding: 0.5rem 2rem; }
+            .nav-links a { display: block; padding: 0.85rem 0; font-size: 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+            .nav-links a:last-child { border-bottom: none; }
         }
 
         @media (max-width: 480px) {
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.75rem; }
             .nav-brand span { display: none; }
         }
     </style>
@@ -294,10 +303,14 @@
             <img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28">
             <span>PraxisVerify</span>
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="toggleNav(this)">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
             <a href="/#problem">Problem</a>
             <a href="/#solution">Solution</a>
             <a href="/about">About</a>
+            <a href="/experts">For Experts</a>
             <a href="/#early-access">Early Access</a>
             <a href="/contact">Contact</a>
         </div>
@@ -424,5 +437,9 @@
     </div>
 </footer>
 
+<script>
+function toggleNav(btn){var menu=document.getElementById('nav-menu');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);menu.classList.toggle('is-open');}
+document.addEventListener('click',function(e){var menu=document.getElementById('nav-menu');var btn=document.querySelector('.nav-toggle');if(!menu||!btn)return;if(menu.classList.contains('is-open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}});
+</script>
 </body>
 </html>
