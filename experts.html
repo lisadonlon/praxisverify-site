@@ -14,7 +14,7 @@
     <meta name="twitter:title" content="For Experts — Join the PraxisVerify Network">
     <meta name="twitter:description" content="Credential once. Work across multiple clients. Apply to join the PraxisVerify network of pre-vetted regulatory experts.">
     <link rel="icon" type="image/png" href="img/pvlogo.png">
-    <meta name="date" content="2026-05-15">
+    <meta name="date" content="2026-05-17">
     <link rel="canonical" href="https://praxisverify.com/experts">
     <link rel="help" type="text/plain" href="https://praxisverify.com/llms.txt" title="LLM site info">
     <link rel="preload" href="img/pvlogo.png" as="image">
@@ -26,7 +26,7 @@
         "description": "Application page for regulatory professionals interested in joining the PraxisVerify expert network.",
         "url": "https://praxisverify.com/experts",
         "datePublished": "2026-05-01",
-        "dateModified": "2026-05-15",
+        "dateModified": "2026-05-17",
         "author": {
             "@type": "Person",
             "name": "Lisa Donlon"
@@ -289,12 +289,10 @@
             <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="nav-menu">
-            <a href="/#problem">Problem</a>
-            <a href="/#solution">Solution</a>
-            <a href="/about">About</a>
-            <a href="/experts">For Experts</a>
-            <a href="/#early-access">Early Access</a>
-            <a href="/contact">Contact</a>
+            <a href="#apply">Apply</a>
+            <a href="#rates">Rates</a>
+            <a href="#faq">FAQ</a>
+            <a href="/">Back to main site</a>
         </div>
     </div>
 </nav>
@@ -314,6 +312,10 @@
 <main>
 <section class="content-section">
     <div class="container">
+
+        <div class="glass-card content-card" style="padding: 1.25rem 2.5rem; border-left: 3px solid var(--accent-platform);">
+            <p style="font-size: 0.85rem; line-height: 1.65; color: var(--card-text-muted); margin: 0;"><strong style="color: var(--card-text);">A note on what's published here.</strong> The rates structure, platform fee model, professional indemnity arrangement, retention policy, conflict-of-interest workflow, and subcontracting position set out on this page are <em>indicative</em> &mdash; intended to give experts enough to self-select in or out. The binding terms are presented and signed at credentialing (expert NDA, consulting agreement, and platform attestation). If anything below would be a deal-breaker, raise it with us before applying rather than after.</p>
+        </div>
 
         <div class="glass-card content-card">
             <h2>The Expert Engagement Gap</h2>
@@ -426,7 +428,7 @@
             <p>Adjacent or emerging specialisms not on this list? Apply anyway and tell us &mdash; the demand mix evolves with the client base. Training delivery, soft skills, and project / stakeholder management profiles are not part of the launch network &mdash; the platform engagement model is scoped to document annotation and review.</p>
         </div>
 
-        <div class="glass-card content-card">
+        <div class="glass-card content-card" id="rates">
             <h2>Rates &amp; Terms</h2>
             <p><strong>Project rate per assignment.</strong> Rates are not negotiated per engagement &mdash; the platform calculates a project rate before you accept, based on a defined set of complexity inputs:</p>
             <ul>
@@ -489,7 +491,7 @@
             <p><strong>Subcontracting.</strong> Assignments are matched to the credentialed individual expert and cannot be subcontracted or delegated to a third party. The credential, the audit trail, and the professional indemnity cover are all tied to the named expert who accepted the match. If you regularly work with a named associate whose credentials you would want to bring into the network, ask them to apply directly &mdash; we credential individuals, not firms.</p>
         </div>
 
-        <div class="glass-card content-card">
+        <div class="glass-card content-card" id="faq">
             <h2>FAQ</h2>
             <dl class="faq">
                 <dt>Is there a minimum number of assignments per month?</dt>
@@ -515,11 +517,11 @@
             </dl>
         </div>
 
-        <div class="glass-card content-card apply-card">
+        <div class="glass-card content-card apply-card" id="apply">
             <h2>Apply to Join the Expert Network</h2>
             <p>Send a short email with your specialisms, credentials, and a sentence on why PraxisVerify fits where you are in your practice. We respond within one business day.</p>
             <a href="mailto:info@praxisverify.com?subject=PraxisVerify%20-%20Expert%20Network%20Application" class="cta-btn" onclick="if(typeof gtag==='function'){gtag('event','expert_apply_click',{cta_type:'expert_apply'})}">
-                Apply by email
+                Apply as an expert
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
             <p class="apply-note">An embedded application form will replace email when the platform is publicly deployed.</p>
@@ -550,7 +552,7 @@
                 <a href="/terms">Terms of Service</a>
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <p class="footer-updated">Last updated <time datetime="2026-05-15">May 2026</time></p>
+            <p class="footer-updated">Last updated <time datetime="2026-05-17">May 2026</time></p>
         </div>
     </div>
 </footer>
