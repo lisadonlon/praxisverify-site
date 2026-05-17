@@ -217,6 +217,13 @@
         .flow-num { width: 48px; height: 48px; border-radius: 50%; background: var(--btn-bg); color: var(--btn-text); font-family: var(--heading); font-size: 1.25rem; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(22, 101, 52, 0.25); }
         .flow-title { font-family: var(--heading); font-size: 0.98rem; font-weight: 700; color: var(--card-text); margin-bottom: 0.35rem; line-height: 1.25; }
         .flow-desc { font-family: var(--body); font-size: 0.82rem; color: var(--card-text-muted); line-height: 1.5; }
+        .chip-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.4rem 0 1.5rem; }
+        .chip { display: inline-flex; align-items: center; padding: 0.4rem 0.85rem; border-radius: 999px; font-family: var(--body); font-size: 0.82rem; font-weight: 500; color: var(--card-text); background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.28); line-height: 1.3; transition: background 0.2s ease, border-color 0.2s ease; }
+        .chip-regulatory { background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.30); }
+        .chip-safety { background: rgba(6, 182, 212, 0.13); border-color: rgba(6, 182, 212, 0.32); }
+        .chip-design { background: rgba(59, 130, 246, 0.12); border-color: rgba(59, 130, 246, 0.30); }
+        .chip-standalone { background: rgba(100, 116, 139, 0.15); border-color: rgba(100, 116, 139, 0.32); }
+        @media (max-width: 480px) { .chip { font-size: 0.78rem; padding: 0.35rem 0.7rem; } }
         .faq-card h2 { display: flex; align-items: center; gap: 0.65rem; }
         .faq-card h2::before { content: "?"; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-platform); color: #ffffff; font-family: var(--body); font-weight: 700; font-size: 1.05rem; flex-shrink: 0; line-height: 1; }
         .faq-list { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 1.25rem; }
@@ -401,42 +408,59 @@
 
         <div class="glass-card content-card">
             <h2>Who We're Looking For</h2>
-            <p>Competency-gated, not years-of-experience-gated. What matters is that you can demonstrate the credential and the practice. Specialisms in demand at launch:</p>
+            <p>Competency-gated, not years-of-experience-gated. Specialisms in demand at launch:</p>
+
             <h3>Quality systems &amp; audit</h3>
-            <ul>
-                <li>ISO 13485 lead auditor qualifications</li>
-                <li>Internal audit programmes across QMS standards (ISO 13485, FDA Quality System Regulation / Quality Management System Regulation (QSR / QMSR), ISO 14971, ISO 14155)</li>
-                <li>Medical Device Single Audit Program (MDSAP) audit experience</li>
-            </ul>
+            <div class="chip-grid">
+                <span class="chip">ISO 13485 lead auditor</span>
+                <span class="chip">Internal audit</span>
+                <span class="chip">FDA QSR / QMSR</span>
+                <span class="chip">ISO 14971 (risk)</span>
+                <span class="chip">ISO 14155 (clinical)</span>
+                <span class="chip">MDSAP</span>
+            </div>
+
             <h3>Regulatory submissions &amp; review responses</h3>
-            <ul>
-                <li>EU Medical Device Regulation / In Vitro Diagnostic Regulation (MDR / IVDR) regulatory affairs</li>
-                <li>FDA submissions: 510(k), Premarket Approval (PMA), De Novo</li>
-                <li>FDA Additional Information (AI) response preparation</li>
-                <li>Notified Body deficiency / review-question response preparation (MDR, IVDR)</li>
-            </ul>
+            <div class="chip-grid">
+                <span class="chip chip-regulatory">EU MDR</span>
+                <span class="chip chip-regulatory">EU IVDR</span>
+                <span class="chip chip-regulatory">FDA 510(k)</span>
+                <span class="chip chip-regulatory">FDA PMA</span>
+                <span class="chip chip-regulatory">FDA De Novo</span>
+                <span class="chip chip-regulatory">FDA AI responses</span>
+                <span class="chip chip-regulatory">Notified Body deficiencies</span>
+            </div>
+
             <h3>Product safety &amp; standards</h3>
-            <ul>
-                <li>Product safety &amp; compliance (IEC 60601 series, applicable harmonised standards)</li>
-                <li>Standards identification &amp; applicability review</li>
-                <li>Labelling and instructions for use (IFU) review</li>
-                <li>Electromagnetic compatibility (EMC) and safety test plan review</li>
-            </ul>
+            <div class="chip-grid">
+                <span class="chip chip-safety">IEC 60601 series</span>
+                <span class="chip chip-safety">Standards applicability</span>
+                <span class="chip chip-safety">Labelling &amp; IFU</span>
+                <span class="chip chip-safety">EMC test plans</span>
+                <span class="chip chip-safety">Safety test plans</span>
+            </div>
+
             <h3>Design, software &amp; clinical</h3>
-            <ul>
-                <li>21 CFR Part 11 / computer systems validation (CSV)</li>
-                <li>Design controls, Design History Files (DHF), and technical documentation</li>
-                <li>Software as a Medical Device (SaMD) and AI/ML regulatory</li>
-                <li>Clinical investigation plans and study protocols</li>
-                <li>Clinical evaluation plans and reports (CEP / CER)</li>
-                <li>IVD performance evaluation plans and reports (PEP / PER)</li>
-                <li>Post-market surveillance (PMS), vigilance, Post-Market Clinical Follow-up (PMCF), Post-Market Performance Follow-up (PMPF)</li>
-            </ul>
-            <h3>Standalone disciplines (applicable across jurisdictions)</h3>
-            <ul>
-                <li>Biostatistics, biocompatibility, sterility, human factors / usability engineering</li>
-            </ul>
-            <p>Adjacent or emerging specialisms not on this list? Apply anyway and tell us &mdash; the demand mix evolves with the client base. Training delivery, soft skills, and project / stakeholder management profiles are not part of the launch network &mdash; the platform engagement model is scoped to document annotation and review.</p>
+            <div class="chip-grid">
+                <span class="chip chip-design">21 CFR Part 11 / CSV</span>
+                <span class="chip chip-design">Design controls</span>
+                <span class="chip chip-design">DHF &amp; tech docs</span>
+                <span class="chip chip-design">SaMD / AI-ML</span>
+                <span class="chip chip-design">Clinical investigation plans</span>
+                <span class="chip chip-design">CEP / CER</span>
+                <span class="chip chip-design">PEP / PER (IVD)</span>
+                <span class="chip chip-design">PMS / PMCF / PMPF</span>
+            </div>
+
+            <h3>Standalone disciplines</h3>
+            <div class="chip-grid">
+                <span class="chip chip-standalone">Biostatistics</span>
+                <span class="chip chip-standalone">Biocompatibility</span>
+                <span class="chip chip-standalone">Sterility</span>
+                <span class="chip chip-standalone">Human factors</span>
+            </div>
+
+            <p>Adjacent or emerging specialism not on this list? Apply anyway &mdash; the demand mix evolves with the client base. Training, soft skills, and project / stakeholder management are not part of the launch network: the engagement model is scoped to document annotation and review.</p>
         </div>
 
         <div class="glass-card content-card" id="rates">
