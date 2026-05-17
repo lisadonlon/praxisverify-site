@@ -217,9 +217,20 @@
         .flow-num { width: 48px; height: 48px; border-radius: 50%; background: var(--btn-bg); color: var(--btn-text); font-family: var(--heading); font-size: 1.25rem; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; position: relative; z-index: 1; box-shadow: 0 2px 8px rgba(22, 101, 52, 0.25); }
         .flow-title { font-family: var(--heading); font-size: 0.98rem; font-weight: 700; color: var(--card-text); margin-bottom: 0.35rem; line-height: 1.25; }
         .flow-desc { font-family: var(--body); font-size: 0.82rem; color: var(--card-text-muted); line-height: 1.5; }
-        .faq dt { font-family: var(--heading); font-weight: 700; color: var(--card-text); margin-top: 1.25rem; font-size: 1rem; }
-        .faq dt:first-child { margin-top: 0; }
-        .faq dd { color: var(--card-text-muted); margin-top: 0.35rem; font-size: 0.95rem; line-height: 1.7; }
+        .faq-card h2 { display: flex; align-items: center; gap: 0.65rem; }
+        .faq-card h2::before { content: "?"; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-platform); color: #ffffff; font-family: var(--body); font-weight: 700; font-size: 1.05rem; flex-shrink: 0; line-height: 1; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 1.25rem; }
+        .faq-item { background: rgba(255, 255, 255, 0.35); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 12px; overflow: hidden; transition: background 0.2s ease; }
+        .faq-item[open] { background: rgba(255, 255, 255, 0.6); border-color: rgba(99, 102, 241, 0.25); }
+        .faq-q { padding: 0.95rem 1.25rem; cursor: pointer; font-family: var(--heading); font-weight: 700; color: var(--card-text); font-size: 1rem; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: color 0.2s ease; }
+        .faq-q::-webkit-details-marker { display: none; }
+        .faq-q::after { content: ""; width: 9px; height: 9px; border-right: 2px solid var(--card-text-muted); border-bottom: 2px solid var(--card-text-muted); transform: rotate(45deg); transition: transform 0.25s ease; flex-shrink: 0; margin-bottom: 4px; }
+        .faq-item[open] .faq-q::after { transform: rotate(-135deg); margin-bottom: 0; margin-top: 4px; border-color: var(--accent-platform); }
+        .faq-q:hover { color: var(--btn-bg); }
+        .faq-q:focus-visible { outline: 2px solid var(--accent-platform); outline-offset: 2px; border-radius: 8px; }
+        .faq-a { padding: 0 1.25rem 1.1rem; color: var(--card-text-muted); font-size: 0.95rem; line-height: 1.7; }
+        .faq-a p { margin: 0 0 0.5rem; }
+        .faq-a p:last-child { margin-bottom: 0; }
         .footer-section { padding: 1.5rem 0 3rem; }
         .footer-copy { font-size: 0.85rem; color: var(--card-text-muted); margin-bottom: 0.5rem; }
         .footer-links { display: flex; gap: 1.5rem; font-size: 0.85rem; flex-wrap: wrap; }
@@ -314,7 +325,7 @@
     <div class="container">
 
         <div class="glass-card content-card" style="padding: 1.25rem 2.5rem; border-left: 3px solid var(--accent-platform);">
-            <p style="font-size: 0.85rem; line-height: 1.65; color: var(--card-text-muted); margin: 0;"><strong style="color: var(--card-text);">A note on what's published here.</strong> The rates structure, platform fee model, professional indemnity arrangement, retention policy, conflict-of-interest workflow, and subcontracting position set out on this page are <em>indicative</em> &mdash; intended to give experts enough to self-select in or out. The binding terms are presented and signed at credentialing (expert NDA, consulting agreement, and platform attestation). If anything below would be a deal-breaker, raise it with us before applying rather than after.</p>
+            <p style="font-size: 0.85rem; line-height: 1.65; color: var(--card-text-muted); margin: 0;"><strong style="color: var(--card-text);">A note on what's published here.</strong> Everything below is <em>indicative</em>, intended to help you self-select. Binding terms are signed at credentialing &mdash; if something would be a deal-breaker, raise it before applying.</p>
         </div>
 
         <div class="glass-card content-card">
@@ -491,30 +502,44 @@
             <p><strong>Subcontracting.</strong> Assignments are matched to the credentialed individual expert and cannot be subcontracted or delegated to a third party. The credential, the audit trail, and the professional indemnity cover are all tied to the named expert who accepted the match. If you regularly work with a named associate whose credentials you would want to bring into the network, ask them to apply directly &mdash; we credential individuals, not firms.</p>
         </div>
 
-        <div class="glass-card content-card" id="faq">
+        <div class="glass-card content-card faq-card" id="faq">
             <h2>FAQ</h2>
-            <dl class="faq">
-                <dt>Is there a minimum number of assignments per month?</dt>
-                <dd>No. There is no floor. You stay in the active network as long as your credentials are current.</dd>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-q">Is there a minimum number of assignments per month?</summary>
+                    <div class="faq-a"><p>No. There is no floor. You stay in the active network as long as your credentials are current.</p></div>
+                </details>
 
-                <dt>How quickly will I be matched after credentialing?</dt>
-                <dd>Match velocity depends on demand for your declared specialisms. We're transparent about pipeline depth at credentialing &mdash; if your specialism is currently low-demand, you'll know.</dd>
+                <details class="faq-item">
+                    <summary class="faq-q">How quickly will I be matched after credentialing?</summary>
+                    <div class="faq-a"><p>Match velocity depends on demand for your declared specialisms. We're transparent about pipeline depth at credentialing &mdash; if your specialism is currently low-demand, you'll know.</p></div>
+                </details>
 
-                <dt>What happens if a client disputes my assessment?</dt>
-                <dd>Your annotations, review comments, and any add-on sign-off are preserved in the audit trail. Disputes are handled through a documented review process; you retain the right to defend your professional opinion. Regulatory submissions remain the sponsor's responsibility &mdash; your role is qualified independent verification, not authorship.</dd>
+                <details class="faq-item">
+                    <summary class="faq-q">What happens if a client disputes my assessment?</summary>
+                    <div class="faq-a"><p>Your annotations, review comments, and any add-on sign-off are preserved in the audit trail. Disputes are handled through a documented review process; you retain the right to defend your professional opinion. Regulatory submissions remain the sponsor's responsibility &mdash; your role is qualified independent verification, not authorship.</p></div>
+                </details>
 
-                <dt>Can I see what an assignment looks like before accepting?</dt>
-                <dd>Yes. You see scope, document type, estimated effort, calculated rate, and any add-on fee triggers before you accept. You can decline without penalty &mdash; and you should, if your expertise isn't a clean fit for the assignment. We'd rather reassign than have a marginal match.</dd>
+                <details class="faq-item">
+                    <summary class="faq-q">Can I see what an assignment looks like before accepting?</summary>
+                    <div class="faq-a"><p>Yes. You see scope, document type, estimated effort, calculated rate, and any add-on fee triggers before you accept. You can decline without penalty &mdash; and you should, if your expertise isn't a clean fit for the assignment. We'd rather reassign than have a marginal match.</p></div>
+                </details>
 
-                <dt>Can I submit a standalone gap document or report instead of inline annotations?</dt>
-                <dd>Inline annotation is the primary review output the platform is built around &mdash; it produces the per-finding audit trail clients and Notified Bodies expect. For assignments where a structured summary report or gap document is more useful than per-line annotation, the platform supports a report-style output attached to the assignment in addition to (not instead of) per-finding entries. Pure free-form report submission, where the only deliverable is a separate document outside the assignment record, is not part of the launch scope.</dd>
+                <details class="faq-item">
+                    <summary class="faq-q">Can I submit a standalone gap document or report instead of inline annotations?</summary>
+                    <div class="faq-a"><p>Inline annotation is the primary review output the platform is built around &mdash; it produces the per-finding audit trail clients and Notified Bodies expect. For assignments where a structured summary report or gap document is more useful than per-line annotation, the platform supports a report-style output attached to the assignment in addition to (not instead of) per-finding entries. Pure free-form report submission, where the only deliverable is a separate document outside the assignment record, is not part of the launch scope.</p></div>
+                </details>
 
-                <dt>Where can experts be based at launch?</dt>
-                <dd>Ireland on day one. Geographic expansion will follow client demand in other jurisdictions.</dd>
+                <details class="faq-item">
+                    <summary class="faq-q">Where can experts be based at launch?</summary>
+                    <div class="faq-a"><p>Ireland on day one. Geographic expansion will follow client demand in other jurisdictions.</p></div>
+                </details>
 
-                <dt>What about IP and confidentiality?</dt>
-                <dd>Document IP remains the client's. Your assessment work product is governed by the platform NDA. No client documents leave the secure environment. Retention and deletion rules are set out in the <strong>Data Security &amp; Confidentiality</strong> section above &mdash; in short, documents are auto-deleted 90 days after the end of the project, not 90 days after upload.</dd>
-            </dl>
+                <details class="faq-item">
+                    <summary class="faq-q">What about IP and confidentiality?</summary>
+                    <div class="faq-a"><p>Document IP remains the client's. Your assessment work product is governed by the platform NDA. No client documents leave the secure environment. Retention and deletion rules are set out in the <strong>Data Security &amp; Confidentiality</strong> section above &mdash; in short, documents are auto-deleted 90 days after the end of the project, not 90 days after upload.</p></div>
+                </details>
+            </div>
         </div>
 
         <div class="glass-card content-card apply-card" id="apply">
