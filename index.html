@@ -254,6 +254,43 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
 @media (prefers-reduced-motion: reduce) { .stamp-on-mount { animation: none; } }
 .audit-seal { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(16, 185, 129, 0.15); color: #10B981; font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; border: 1px solid rgba(16, 185, 129, 0.42); }
 .audit-seal::before { content: "\2713"; font-weight: 700; }
+
+.hero-bridge { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 6rem 0 4rem; overflow: hidden; background: linear-gradient(125deg, #0A192F 0%, #0A192F 38%, #1a2c4e 46%, #c2c8d5 54%, #F3F4F6 62%, #F3F4F6 100%); }
+.hero-bridge .hero-wm { position: absolute; pointer-events: none; z-index: 1; background-repeat: no-repeat; background-size: contain; }
+.hero-bridge .hero-wm-dark { top: -8%; left: -6%; width: 55vw; height: 75vh; background-image: url('img/brand/mark-white-transparent.png'); background-position: center; opacity: 0.07; }
+.hero-bridge .hero-wm-light { bottom: -12%; right: -8%; width: 60vw; height: 80vh; background-image: url('img/brand/mark-navy-transparent.png'); background-position: center; opacity: 0.05; filter: grayscale(1) brightness(1.1); }
+.hero-bridge-content { position: relative; z-index: 2; text-align: left; max-width: 900px; }
+.hero-bridge-headline { font-family: var(--heading); font-size: clamp(2.8rem, 7.5vw, 5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: #ffffff; mix-blend-mode: difference; margin-bottom: 2rem; transform: scaleY(1.12); transform-origin: top left; }
+.hero-bridge-eyebrow { font-family: var(--heading); font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 600; color: #0A192F; margin-bottom: 1rem; font-style: italic; }
+.hero-bridge-body { font-family: var(--body); font-size: 1.05rem; color: #3F4654; line-height: 1.7; margin-bottom: 2.5rem; max-width: 640px; }
+.hero-bridge .scroll-btn { background: #10B981; color: #0A192F; }
+.hero-bridge .scroll-btn:hover { background: #059669; color: #0A192F; }
+@media (max-width: 736px) { .hero-bridge { padding: 5rem 0 3rem; background: linear-gradient(160deg, #0A192F 0%, #0A192F 42%, #1a2c4e 52%, #c2c8d5 60%, #F3F4F6 70%, #F3F4F6 100%); } .hero-bridge .hero-wm-dark { width: 90vw; height: 50vh; } .hero-bridge .hero-wm-light { width: 90vw; height: 50vh; } }
+
+.audit-ledger-section { position: relative; padding: 5rem 0 4rem; background: #0A192F; overflow: hidden; }
+.audit-ledger-mesh { position: absolute; inset: 0; background-image: url('img/brand/mark-white-transparent.png'); background-repeat: no-repeat; background-position: center; background-size: clamp(800px, 110vw, 1600px) auto; opacity: 0.04; pointer-events: none; z-index: 0; transform: rotate(8deg); }
+.audit-ledger-section .container { position: relative; z-index: 1; }
+.section-heading-bridge { text-align: center; color: #E5E9F0; }
+.audit-ledger-intro { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; color: #8892A6; }
+.audit-ledger { background: #112240; border-radius: 14px; padding: 1.25rem; max-width: 720px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.45); border: 1px solid #233554; overflow: hidden; }
+.audit-ledger-header { display: flex; align-items: center; gap: 0.85rem; padding: 0.25rem 0.25rem 1rem; border-bottom: 1px solid #233554; margin-bottom: 1rem; }
+.audit-dots { display: inline-flex; gap: 0.4rem; }
+.audit-dots::before, .audit-dots::after, .audit-dots { content: ""; }
+.audit-dots { width: 56px; height: 12px; background: radial-gradient(circle 5px at 6px 6px, #ef4444 100%, transparent 100%), radial-gradient(circle 5px at 28px 6px, #f59e0b 100%, transparent 100%), radial-gradient(circle 5px at 50px 6px, #10B981 100%, transparent 100%); background-repeat: no-repeat; }
+.audit-window-title { color: #E5E9F0; font-weight: 600; font-family: var(--body); font-size: 0.92rem; letter-spacing: 0.02em; }
+.audit-ledger-rows { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.audit-row { display: flex; gap: 0.85rem; padding: 0.85rem 1rem; background: rgba(10, 25, 47, 0.5); border-radius: 10px; border: 1px solid #233554; color: #E5E9F0; align-items: flex-start; }
+.audit-row-marker { flex-shrink: 0; width: 36px; height: 36px; background: #1c2c4a; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #8892A6; }
+.audit-row-content { flex: 1; min-width: 0; }
+.audit-row-ts { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #8892A6; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
+.audit-row-title { font-weight: 600; font-size: 0.95rem; color: #E5E9F0; margin-bottom: 0.2rem; font-family: var(--body); }
+.audit-row-hash { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.72rem; color: #8892A6; letter-spacing: 0.04em; }
+.audit-row-verified { background: rgba(16, 185, 129, 0.18); border-color: #10B981; box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25) inset, 0 6px 24px rgba(16, 185, 129, 0.2); }
+.audit-row-verified .audit-row-marker { background: rgba(16, 185, 129, 0.28); color: #10B981; }
+.audit-row-verified .audit-row-title { color: #ffffff; }
+.audit-row-verified .audit-row-ts, .audit-row-verified .audit-row-hash { color: rgba(255,255,255,0.7); }
+.audit-ledger-footnote { text-align: center; color: #8892A6; font-size: 0.8rem; margin-top: 1.25rem; font-style: italic; }
+@media (max-width: 640px) { .audit-ledger { padding: 1rem; } .audit-row { padding: 0.75rem; gap: 0.7rem; } .audit-row-marker { width: 30px; height: 30px; } .audit-row-title { font-size: 0.88rem; } }
 </style>
 </head>
 <body>
@@ -303,23 +340,17 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
 </nav>
 
 <!-- ════════════════════ HERO ════════════════════ -->
-<section class="hero" style="position: relative;">
-    <div class="authority-watermark" aria-hidden="true"></div>
-    <div class="container">
-        <div class="glass-card fade-in">
-            <div class="hero-logo">
-                <picture>
-                    <source srcset="img/pvlogo.webp" type="image/webp">
-                    <img src="img/pvlogo.png" alt="PraxisVerify" width="112" height="112" fetchpriority="high">
-                </picture>
-            </div>
-            <h1>The High-Trust Bridge</h1>
-            <p class="subtitle"><strong>Verified Human Expertise for Life Sciences Compliance.</strong> Traditional expert engagement takes 3&ndash;6 months of vendor qualification, Quality Management System (QMS) onboarding, and contractual setup. PraxisVerify closes that Verification Gap, connecting life sciences companies to certified human experts through one-time platform credentialing.</p>
-            <a href="#problem" class="scroll-btn">
-                Explore the Problem
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-            </a>
-        </div>
+<section class="hero hero-bridge">
+    <div class="hero-wm hero-wm-dark" aria-hidden="true"></div>
+    <div class="hero-wm hero-wm-light" aria-hidden="true"></div>
+    <div class="container hero-bridge-content">
+        <h1 class="hero-bridge-headline">The High-Trust Bridge</h1>
+        <p class="hero-bridge-eyebrow">Verified Human Expertise for Life Sciences Compliance</p>
+        <p class="hero-bridge-body">Traditional expert engagement takes 3&ndash;6 months of vendor qualification, Quality Management System (QMS) onboarding, and contractual setup. PraxisVerify closes that Verification Gap, connecting life sciences companies to certified human experts through one-time platform credentialing.</p>
+        <a href="#problem" class="scroll-btn">
+            Explore the Problem
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </a>
     </div>
 </section>
 
@@ -509,6 +540,58 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
                 </li>
             </ul>
         </div>
+    </div>
+</section>
+
+<div class="section-gap-lg"></div>
+
+<!-- ════════════════════ TRANSPARENCY BY DESIGN ════════════════════ -->
+<section class="audit-ledger-section" aria-labelledby="audit-heading">
+    <div class="audit-ledger-mesh" aria-hidden="true"></div>
+    <div class="container">
+        <h2 id="audit-heading" class="section-heading section-heading-bridge">Transparency by Design</h2>
+        <p class="trust-body audit-ledger-intro">Every action on the platform produces an immutable, time-stamped record. This is the shape of the audit trail that lands behind every verified review.</p>
+        <div class="audit-ledger fade-in">
+            <div class="audit-ledger-header">
+                <span class="audit-dots" aria-hidden="true"></span>
+                <span class="audit-window-title">Live Audit Ledger</span>
+            </div>
+            <ul class="audit-ledger-rows">
+                <li class="audit-row">
+                    <div class="audit-row-marker"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+                    <div class="audit-row-content">
+                        <div class="audit-row-ts">2026-05-19 14:30:15 UTC</div>
+                        <div class="audit-row-title">Document submitted for review</div>
+                        <div class="audit-row-hash">Hash: 0x4d8f&hellip;e2a1</div>
+                    </div>
+                </li>
+                <li class="audit-row">
+                    <div class="audit-row-marker"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div>
+                    <div class="audit-row-content">
+                        <div class="audit-row-ts">2026-05-19 14:35:22 UTC</div>
+                        <div class="audit-row-title">Expert review initiated</div>
+                        <div class="audit-row-hash">Hash: 0x9b1c&hellip;f3d4</div>
+                    </div>
+                </li>
+                <li class="audit-row audit-row-verified stamp-on-mount">
+                    <div class="audit-row-marker"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+                    <div class="audit-row-content">
+                        <div class="audit-row-ts">2026-05-19 14:42:50 UTC</div>
+                        <div class="audit-row-title">Verified approval time-stamped</div>
+                        <div class="audit-row-hash">Hash: 0x2a7e&hellip;b5c6</div>
+                    </div>
+                </li>
+                <li class="audit-row">
+                    <div class="audit-row-marker"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div>
+                    <div class="audit-row-content">
+                        <div class="audit-row-ts">2026-05-19 14:45:01 UTC</div>
+                        <div class="audit-row-title">Signed deliverable issued</div>
+                        <div class="audit-row-hash">Hash: 0x8f12&hellip;a039</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <p class="audit-ledger-footnote">Indicative sample. Real assignments produce equivalent records with the assigned expert and client identifiers.</p>
     </div>
 </section>
 
