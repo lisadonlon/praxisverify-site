@@ -66,11 +66,11 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
             --bg: #0A192F;
-            --surface: #112240;
+            --surface: #FFFFFF;
             --surface-solid: rgba(235, 238, 248, 0.82);
-            --border: #233554;
-            --card-text: #E5E9F0;
-            --card-text-muted: #8892A6;
+            --border: #10B981;
+            --card-text: #0A192F;
+            --card-text-muted: #3F4654;
             --text: #E5E9F0;
             --text-muted: #8892A6;
             --btn-bg: #10B981;
@@ -109,10 +109,8 @@
 
         .glass-card {
             background: var(--surface);
-            backdrop-filter: blur(20px) saturate(1.2);
-            -webkit-backdrop-filter: blur(20px) saturate(1.2);
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            border: 2px solid var(--border);
             padding: 4rem 3.5rem;
             color: var(--card-text);
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
