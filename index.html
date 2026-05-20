@@ -292,11 +292,6 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
 .audit-row-verified .audit-row-ts, .audit-row-verified .audit-row-hash { color: rgba(255,255,255,0.7); }
 .audit-ledger-footnote { text-align: center; color: #8892A6; font-size: 0.8rem; margin-top: 1.25rem; font-style: italic; }
 @media (max-width: 640px) { .audit-ledger { padding: 1rem; } .audit-row { padding: 0.75rem; gap: 0.7rem; } .audit-row-marker { width: 30px; height: 30px; } .audit-row-title { font-size: 0.88rem; } }
-/* debossed-foil-emerald v2 (stronger) */
-.scroll-btn, .cta-primary, .audit-seal { background: radial-gradient(ellipse 80% 60% at 50% 25%, rgba(255, 255, 255, 0.22) 0%, transparent 55%), linear-gradient(180deg, #0a7d57 0%, #10B981 35%, #11c089 60%, #10B981 85%, #0a7d57 100%); box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.42), inset 0 -3px 5px rgba(195, 250, 222, 0.32), inset 0 0 0 1.5px rgba(5, 50, 35, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06); text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18); }
-.scroll-btn:hover, .cta-primary:hover { background: radial-gradient(ellipse 80% 60% at 50% 25%, rgba(255, 255, 255, 0.28) 0%, transparent 55%), linear-gradient(180deg, #086d4b 0%, #10B981 35%, #14d294 60%, #10B981 85%, #086d4b 100%); box-shadow: inset 0 5px 9px rgba(0, 0, 0, 0.5), inset 0 -3px 5px rgba(195, 250, 222, 0.38), inset 0 0 0 1.5px rgba(5, 50, 35, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08); transform: translateY(1px); }
-.audit-row-verified { background: linear-gradient(180deg, rgba(10, 125, 87, 0.32) 0%, rgba(17, 192, 137, 0.28) 50%, rgba(10, 125, 87, 0.32) 100%); border-color: transparent; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.35), inset 0 -2px 4px rgba(195, 250, 222, 0.18), inset 0 0 0 1.5px rgba(5, 50, 35, 0.5); }
-.audit-row-verified .audit-row-marker { background: radial-gradient(ellipse 80% 60% at 50% 25%, rgba(255, 255, 255, 0.25) 0%, transparent 55%), linear-gradient(180deg, #0a7d57 0%, #11c089 60%, #0a7d57 100%); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.45), inset 0 -1.5px 3px rgba(195, 250, 222, 0.3), inset 0 0 0 1.5px rgba(5, 50, 35, 0.6); color: #0A192F; }
 </style>
 </head>
 <body>
@@ -328,7 +323,7 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
 <nav class="site-nav" aria-label="Main navigation">
     <div class="container">
         <a href="/" class="nav-brand">
-            <picture><source srcset="img/pvlogo.webp" type="image/webp"><img src="img/pvlogo.png" alt="PraxisVerify" width="28" height="28"></picture>
+            <picture><source srcset="img/pvlogo.webp" type="image/webp"><img src="img/brand/mark-white-transparent.png" alt="PraxisVerify" width="28" height="28"></picture>
             <span>PraxisVerify</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="toggleNav(this)">
@@ -391,18 +386,17 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
     <div class="container">
         <div class="glass-card fade-in">
             <h2 class="section-heading">Why Trust Can't Be Automated</h2>
-            <p class="trust-body">In highly regulated industries like MedTech and Pharma, AI can accelerate documentation drafting, but regulatory bodies &mdash; including the <strong>FDA</strong>, <strong>EU Notified Bodies</strong>, and national competent authorities &mdash; require qualified human experts to verify and sign off on critical submissions. A 510(k) submission needs a regulatory specialist's review. A Clinical Evaluation Report requires clinical data appraisal by an experienced assessor. An ISO 13485 gap analysis demands a qualified auditor.</p>
-            <p class="trust-body">AI adoption is accelerating fast. CSO data shows Irish enterprise AI adoption nearly doubled in a single year, rising from 8% to 14.9% between 2023 and 2024, and the Government's <em>National AI Strategy</em> targets 75% of enterprises using cloud, AI and data analytics by 2030. Ibec's 2026 medtech research found that 97% of Irish manufacturing leaders in medtech, pharma and engineering plan to adopt AI to improve efficiency and productivity. As AI generates more regulatory content, faster, the bottleneck shifts &mdash; from drafting to qualified human verification.</p>
+            <p class="trust-body">AI can draft documents faster than ever. Regulators still require a qualified human expert to verify and sign off. A 510(k) needs a regulatory specialist's review. A Clinical Evaluation Report needs clinical-data appraisal. An ISO 13485 audit needs a qualified auditor.</p>
+            <p class="trust-body">97% of Irish manufacturing leaders in medtech, pharma and engineering plan to adopt AI (Ibec, 2026). The bottleneck shifts from drafting to verification.</p>
             <h3 style="font-family: var(--heading); font-size: 1.2rem; font-weight: 700; color: var(--card-text); margin: 2rem 0 1rem;">The Regulatory Verification Gap</h3>
-            <p class="trust-body">Every regulatory submission in life sciences follows the same pattern: documentation is prepared, then independently verified by qualified experts before it reaches a regulatory authority. This isn't optional &mdash; it's embedded in the regulatory frameworks themselves:</p>
+            <p class="trust-body">Human verification is embedded in the regulatory frameworks:</p>
             <ul style="list-style: none; margin-bottom: 1.5rem;">
-                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);"><strong style="white-space: nowrap; min-width: 140px;">FDA 510(k)</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Predicate device comparison, performance data review, and biocompatibility assessment by specialists who understand classification rules and substantially equivalent determinations.</span></li>
-                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);"><strong style="white-space: nowrap; min-width: 140px;">EU MDR CERs</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Clinical Evaluation Reports must be appraised by evaluators with relevant clinical and regulatory expertise, as defined in Article 61 and MDCG guidance (MDCG 2020-13).</span></li>
-                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);"><strong style="white-space: nowrap; min-width: 140px;">ISO 13485 QMS</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Internal audits require trained auditors who are independent of the processes being audited (Clause 8.2.4).</span></li>
-                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0;"><strong style="white-space: nowrap; min-width: 140px;">21 CFR Part 11</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">The review environment itself must meet regulatory standards &mdash; validated electronic record systems with complete audit trails.</span></li>
+                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);"><strong style="white-space: nowrap; min-width: 140px;">FDA 510(k)</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Predicate comparison, performance review, biocompatibility assessment by qualified specialists.</span></li>
+                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);"><strong style="white-space: nowrap; min-width: 140px;">EU MDR CERs</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Article 61 and MDCG 2020-13 require appraisal by evaluators with clinical and regulatory expertise.</span></li>
+                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(0,0,0,0.06);"><strong style="white-space: nowrap; min-width: 140px;">ISO 13485 QMS</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Clause 8.2.4: internal audits by trained auditors independent of the audited process.</span></li>
+                <li style="display: flex; gap: 0.75rem; padding: 0.6rem 0;"><strong style="white-space: nowrap; min-width: 140px;">21 CFR Part 11</strong> <span style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.55;">Validated electronic record systems with complete audit trails.</span></li>
             </ul>
-            <p class="trust-body">None of these verification steps can be performed by AI alone. Each requires a qualified human expert with the right credentials, the right experience, and &mdash; critically &mdash; documented independence from the team that produced the work.</p>
-            <p class="trust-body">The problem is not a lack of experts &mdash; it's the process of engaging them. Companies spend 3&ndash;6 months on vendor qualification, QMS onboarding, non-disclosure agreement (NDA) negotiations, and contractual setup before a single document gets reviewed. PraxisVerify eliminates this bottleneck with a secure, purpose-built platform that ensures your critical document verification steps are:</p>
+            <p class="trust-body">None of these can be performed by AI alone. Each requires the right credentials, the right experience, and documented independence from the team that produced the work. Today, getting that expert in front of the document takes 3&ndash;6 months of vendor qualification, QMS onboarding, and contracts. PraxisVerify makes that bridge:</p>
             <ul class="pillars">
                 <li>
                     <svg class="pillar-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
@@ -498,17 +492,6 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
                 </table>
             </div>
 
-            <h3 style="font-family: var(--heading); font-size: 1.2rem; font-weight: 700; color: var(--card-text); margin: 2.5rem 0 1rem;">How Expert Engagement Works Today</h3>
-            <p class="trust-body" style="margin-bottom: 1rem;">For most life sciences companies, engaging an external regulatory expert follows a process designed for long-term consulting relationships, not focused document verification:</p>
-            <ol style="color: var(--card-text-muted); font-size: 0.9rem; line-height: 1.7; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                <li style="padding: 0.3rem 0;"><strong style="color: var(--card-text);">Identify a candidate</strong> &mdash; through personal networks, LinkedIn searches, or recruiter referrals. No centralised, pre-vetted marketplace exists for regulatory expertise.</li>
-                <li style="padding: 0.3rem 0;"><strong style="color: var(--card-text);">Vendor qualification</strong> &mdash; the expert must be onboarded into the company's approved supplier list, requiring quality team review, supplier questionnaires, and management sign-off.</li>
-                <li style="padding: 0.3rem 0;"><strong style="color: var(--card-text);">QMS onboarding</strong> &mdash; NDAs, confidentiality agreements, data processing agreements, and often company-specific QMS training before any work begins.</li>
-                <li style="padding: 0.3rem 0;"><strong style="color: var(--card-text);">Contractual negotiation</strong> &mdash; scope of work, payment terms, liability clauses, and IP assignment, each negotiated individually per engagement.</li>
-                <li style="padding: 0.3rem 0;"><strong style="color: var(--card-text);">Document exchange</strong> &mdash; files sent via email, shared drives, or ad hoc tools with no audit trail, no version control, and no automated retention policy.</li>
-            </ol>
-            <p class="trust-body">This process takes 3&ndash;6 months per expert, per client. If a company needs three different specialists for a single submission &mdash; a common scenario for a 510(k) with biocompatibility, software, and sterility components &mdash; the overhead multiplies accordingly.</p>
-
             <ul class="features-list">
                 <li>
                     <div class="feature-icon">
@@ -516,7 +499,7 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
                     </div>
                     <div class="feature-text">
                         <h3>Speed</h3>
-                        <p>Pre-vetted experts typically ready in as little as 48 hours, not the 3&ndash;6 months traditional vendor qualification requires. One-time platform credentialing means experts complete QMS training, NDA execution, and credential verification once &mdash; then they are available for any client engagement on the platform.</p>
+                        <p>Pre-vetted experts ready in 48 hours, not 3&ndash;6 months. One-time platform credentialing, available for any client engagement.</p>
                     </div>
                 </li>
                 <li>
@@ -525,7 +508,7 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
                     </div>
                     <div class="feature-text">
                         <h3>Security <span class="audit-seal stamp-on-mount" aria-label="Audit Ready">Audit Ready</span></h3>
-                        <p>Zero-trust architecture with in-browser-only document review &mdash; no downloads, no email attachments, no local copies. Documents are automatically deleted after 90 days. Every access event is logged with timestamps and user identity, designed to support <strong>21 CFR Part 11</strong> electronic records requirements.</p>
+                        <p>Zero-trust, in-browser only. No downloads, no email, no local copies. Automatic 90-day deletion. Every action logged with timestamps, supporting <strong>21 CFR Part 11</strong>.</p>
                     </div>
                 </li>
                 <li>
@@ -534,7 +517,7 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
                     </div>
                     <div class="feature-text">
                         <h3>Compliance</h3>
-                        <p>Complete audit trails designed to support <strong>21 CFR Part 11</strong> requirements for electronic records and signatures. The platform is designed for regulatory inspection readiness, with every action &mdash; document upload, expert assignment, review completion, and sign-off &mdash; logged and traceable. Pursuing <strong>ISO 13485</strong> certification for the platform itself.</p>
+                        <p>Audit trails for <strong>21 CFR Part 11</strong> electronic records and signatures. Inspection-ready by design. <strong>ISO 13485</strong> certification in progress.</p>
                     </div>
                 </li>
                 <li>
@@ -542,8 +525,8 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
                     <div class="feature-text">
-                        <h3>Expert-in-the-Loop</h3>
-                        <p>AI can draft your documents faster than ever, but regulatory bodies &mdash; the FDA, EU Notified Bodies, and competent authorities &mdash; require human expert verification and sign-off. PraxisVerify provides the certified experts who review and verify life sciences documentation, covering <strong>FDA 510(k) submissions</strong>, <strong>EU MDR Clinical Evaluation Reports</strong>, <strong>ISO 13485 gap analyses</strong>, and design history file verification.</p>
+                        <h3>Human Verification</h3>
+                        <p>Pre-vetted experts review and sign off on FDA submissions, EU MDR CERs, ISO 13485 audits, and DHF verification. The verified-input layer regulators require.</p>
                     </div>
                 </li>
             </ul>
@@ -610,10 +593,8 @@ gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('coo
     <div class="container">
         <div class="glass-card fade-in">
             <h2 class="section-heading">About PraxisVerify</h2>
-            <p class="trust-body">PraxisVerify was founded by <strong>Lisa Donlon</strong>, a quality and regulatory professional with over 20 years of experience in life sciences. Lisa served as European Medical Devices Operations Manager at <strong>NSAI</strong> (Ireland's EU Notified Body), where she was final decision maker on MDR and IVDR certificates and achieved IVDR designation for the Notified Body. She holds an MSc in Pharmaceutical Technology &amp; Regulatory Affairs and is an IRCA Medical Device Principal Auditor.</p>
-            <p class="trust-body">After watching companies struggle with slow, expensive expert engagement for document verification across MedTech and Pharma, Lisa set out to build a better way. Based in Ireland &mdash; home to 9 of the world's top 10 pharmaceutical companies (IDA Ireland) and the second-largest exporter of medical devices in Europe (Ibec, 2026) &mdash; PraxisVerify is building the secure, compliant bridge between life sciences companies and the certified human expertise they need.</p>
-            <p class="trust-body"><a href="/about" style="color: var(--btn-bg); text-decoration: underline;">Read more about our founder and mission &rarr;</a></p>
-            <p class="trust-body" style="margin-bottom: 0;"><a href="https://www.youtube.com/watch?v=jVcL4iNC8iM" target="_blank" rel="noopener" style="color: var(--btn-bg); text-decoration: underline; display: inline-flex; align-items: center; gap: 0.4rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> Watch: AI in Medical Device Regulatory Workflows</a> <span style="font-size: 0.8rem; opacity: 0.6;">(Leap Compliance)</span></p>
+            <p class="trust-body">Founded by <strong>Lisa Donlon</strong>, formerly European Medical Devices Operations Manager at NSAI (Ireland's EU Notified Body). 20+ years in life sciences quality and regulatory. Based in Ireland.</p>
+            <p class="trust-body" style="margin-bottom: 0;"><a href="/about" style="color: var(--btn-bg); text-decoration: underline;">Full bio and mission &rarr;</a></p>
         </div>
     </div>
 </section>
