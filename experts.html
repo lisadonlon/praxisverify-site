@@ -117,7 +117,7 @@
         body { font-family: var(--body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .bg-pattern { position: fixed; inset: 0; z-index: 0; opacity: 0.06; pointer-events: none; }
+        .bg-pattern { position: fixed; inset: 0; z-index: 0; opacity: 0.12; pointer-events: none; }
         .container { max-width: 880px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
         .glass-card { background: var(--surface); border-radius: 16px; border: 1px solid var(--border); padding: 4rem 3.5rem; color: var(--card-text); box-shadow: 0 4px 24px rgba(10, 25, 47, 0.06); }
         .page-header { padding: 5rem 0 1.5rem; }
@@ -155,8 +155,8 @@
         .faq-card h2 { display: flex; align-items: center; gap: 0.65rem; }
         .faq-card h2::before { content: "?"; display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-platform); color: #ffffff; font-family: var(--body); font-weight: 700; font-size: 1.05rem; flex-shrink: 0; line-height: 1; }
         .faq-list { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 1.25rem; }
-        .faq-item { background: rgba(255, 255, 255, 0.35); border: 1px solid rgba(0, 0, 0, 0.06); border-radius: 12px; overflow: hidden; transition: background 0.2s ease; }
-        .faq-item[open] { background: rgba(255, 255, 255, 0.6); border-color: rgba(99, 102, 241, 0.25); }
+        .faq-item { background: #F3F4F6; border: 1px solid #E2E4E9; border-radius: 12px; overflow: hidden; transition: background 0.2s ease, border-color 0.2s ease; }
+        .faq-item[open] { background: #FFFFFF; border-color: #10B981; }
         .faq-q { padding: 0.95rem 1.25rem; cursor: pointer; font-family: var(--heading); font-weight: 700; color: var(--card-text); font-size: 1rem; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: color 0.2s ease; }
         .faq-q::-webkit-details-marker { display: none; }
         .faq-q::after { content: ""; width: 9px; height: 9px; border-right: 2px solid var(--card-text-muted); border-bottom: 2px solid var(--card-text-muted); transform: rotate(45deg); transition: transform 0.25s ease; flex-shrink: 0; margin-bottom: 4px; }
@@ -268,7 +268,7 @@
 
         <div class="glass-card content-card">
             <h2>The Engagement Gap</h2>
-            <p>If you've consulted in MedTech or Pharma you know the shape of the problem. Every new client is months of vendor qualification, NDAs and DPAs negotiated bilaterally, QMS onboarding to repeat. The admin overhead scales worse than the work itself. PraxisVerify fixes the engagement layer so you can do the work you're qualified for.</p>
+            <p>If you've consulted in MedTech or Pharma you know the problem. Every new client is months of vendor qualification, NDAs and DPAs negotiated bilaterally, QMS onboarding to repeat. The admin overhead scales worse than the work itself. PraxisVerify fixes the engagement layer so you can do the work you're qualified for.</p>
         </div>
 
         <div class="glass-card content-card">
@@ -375,16 +375,31 @@
             <p>Adjacent or emerging specialism not listed? Apply anyway. Training, soft skills, and project management are not part of the launch network.</p>
         </div>
 
-        <div class="glass-card content-card">
-            <h2>Key Terms in Brief</h2>
-            <ul>
-                <li><strong>Rates.</strong> Project rate per assignment, calculated by the platform from complexity. Add-on fees for expedited TAT, re-reviews, and sign-off. Platform fee disclosed at credentialing.</li>
-                <li><strong>Insurance.</strong> PraxisVerify carries platform-level PI cover. You carry your own PI. Both proven at credentialing.</li>
-                <li><strong>Data.</strong> In-browser review only, no downloads. Client documents auto-delete 90 days after project end. Client-identifying data must never enter a public AI tool.</li>
-                <li><strong>Credentialing.</strong> Individual-level credential. Invoicing can route through your practice's company.</li>
-                <li><strong>Selective network.</strong> Credentials verified against issuing bodies. No fee to apply or be credentialed.</li>
-            </ul>
-            <p style="font-size: 0.85rem; color: var(--card-text-muted); margin-top: 1rem; margin-bottom: 0;">Full terms presented at credentialing. Specific questions on rates, insurance, COI, data handling, or AI use, raise them before applying and we'll work through them.</p>
+        <div class="glass-card content-card faq-card" id="key-terms">
+            <h2>Key Terms</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-q">Rates</summary>
+                    <div class="faq-a"><p>Project rate per assignment, calculated by the platform from complexity. Add-on fees for expedited TAT, re-reviews, and sign-off. Platform fee disclosed at credentialing.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q">Insurance</summary>
+                    <div class="faq-a"><p>PraxisVerify carries platform-level PI cover. You carry your own PI. Both proven at credentialing.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q">Data</summary>
+                    <div class="faq-a"><p>Browser-based review. No installation, no downloads, no local copies. Client documents auto-delete 90 days after project end. Client-identifying data must never enter a public AI tool.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q">Credentialing</summary>
+                    <div class="faq-a"><p>Individual-level credential. Invoicing can route through your practice's company.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q">Selective network</summary>
+                    <div class="faq-a"><p>Credentials verified against issuing bodies. No fee to apply or be credentialed.</p></div>
+                </details>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--card-text-muted); margin-top: 1.25rem; margin-bottom: 0;">Full terms presented at credentialing. Specific questions, raise them before applying and we'll work through them.</p>
         </div>
 
         <div class="glass-card content-card apply-card" id="apply">
