@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&family=Inter:wght@500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1200px; height: 630px; overflow: hidden; }
+body {
+    background: #0A192F;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+}
+.wm { position: absolute; opacity: 0.05; pointer-events: none; }
+.wm-1 { top: -180px; left: -120px; width: 380px; }
+.wm-2 { bottom: -200px; right: -100px; width: 420px; }
+.logo { width: 380px; display: block; position: relative; z-index: 1; }
+.tagline {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 34px;
+    color: #10B981;
+    text-align: center;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+}
+.domain {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #8892A6;
+    letter-spacing: 0.08em;
+    position: relative;
+    z-index: 1;
+}
+</style>
+</head>
+<body>
+<img class="wm wm-1" src="../img/brand/mark-white-transparent.svg" alt="">
+<img class="wm wm-2" src="../img/brand/mark-white-transparent.svg" alt="">
+<img class="logo" src="../img/brand/logo-stacked-white-transparent.svg" alt="PraxisVerify">
+<p class="tagline">Verified Human Expertise for Life Sciences Compliance</p>
+<p class="domain">praxisverify.com</p>
+</body>
+</html>

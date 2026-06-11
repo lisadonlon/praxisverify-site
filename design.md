@@ -10,7 +10,7 @@ If `pv-branding` and this file disagree, the brand skill wins and this file shou
 |---|---|
 | Markup | Plain HTML, no framework |
 | Styles | Inline `<style>` block per page — no external stylesheet, no preprocessor |
-| Scripts | Inline `<script>` — fade-in IntersectionObserver, cookie consent, nav hamburger toggle |
+| Scripts | Inline `<script>` — fade-in IntersectionObserver (index), nav scroll-spy (index), cookie consent (all pages), nav hamburger toggle + Escape-to-close (all pages) |
 | Hosting | GitHub Pages from `master`; Cloudflare in front for security headers and TLS |
 | Build | None — files served as-is |
 | Deploy | `git push origin master` → GitHub Pages rebuilds in ~1–2 min |
@@ -19,58 +19,63 @@ Pages: `index.html`, `experts.html`, `about.html`, `contact.html`, `privacy.html
 
 Each page carries its own copy of the CSS block. Changes to shared tokens or components must be repeated across all six files — there is no shared stylesheet. When changing a token, grep for it across the directory.
 
+## Pillars
+
+Per `pv-branding`, the site expresses two of the three brand pillars:
+
+- **The Authority (dark)** — `index.html`, `about.html`, `contact.html`, `privacy.html`, `terms.html`. Deep Navy background, white glass cards, emerald actions. The index hero carries the dark→light "bridge" gradient behind its white card.
+- **The Journal (light)** — `experts.html`. Light `#F3F4F6` surface, white cards, hairline borders, single faint navy-mark watermark. Light by design — do not darken.
+
+> A full-page dark Authority hero + scrolling dark→light journey + motion layer was prototyped and **rejected by Lisa (2026-06-11)** — too dark, foil asset blocky. Do not reintroduce without a fresh brief.
+
 ## Colour tokens
 
 Custom properties declared on `:root` in every page:
 
-| Token | Value | Use |
-|---|---|---|
-| `--bg` | `#0f172a` | Page background (Slate 950) |
-| `--surface` | `rgba(235, 238, 248, 0.82)` | Glass-card surface |
-| `--border` | `rgba(255, 255, 255, 0.08)` | Card / nav border on dark |
-| `--card-text` | `#1e293b` | Headings on glass cards (Deep Navy) |
-| `--card-text-muted` | `#35353f` | Body text on glass cards |
-| `--text` | `#e2e2ea` (`#c8c8d0` on some pages) | Body text on dark background |
-| `--text-muted` | `#b8b8c8` (`#8a8a98` on some pages) | Secondary text on dark |
-| `--btn-bg` | `#166534` | Primary CTA — Deep Bottle Green |
-| `--btn-text` | `#ffffff` | Button text |
-| `--accent-platform` | `#6366f1` | Indigo accent (zoning only — see below) |
+| Token | Value (dark pages) | Value (experts.html) | Use |
+|---|---|---|---|
+| `--bg` | `#0A192F` | `#F3F4F6` | Page background (Deep Navy / Journal light) |
+| `--surface` | `#FFFFFF` | `#FFFFFF` | Card surface |
+| `--border` | `#10B981` | `#E2E4E9` | Card border (emerald on dark pages, hairline on Journal) |
+| `--card-text` | `#0A192F` | `#0A192F` | Headings on cards |
+| `--card-text-muted` | `#3F4654` | `#3F4654` | Body text on cards |
+| `--text` | `#E5E9F0` | `#0A192F` | Body text on page background |
+| `--text-muted` | `#8892A6` | `#5C6473` | Secondary text on page background |
+| `--btn-bg` | `#10B981` | `#10B981` | Primary CTA fill (brand emerald) |
+| `--btn-text` | `#0A192F` | `#0A192F` | Button text — Deep Navy, **never white** (white on `#10B981` fails AA at 2.54:1) |
+| `--link` | `#047857` | `#047857` | Link/text emerald on white cards (5.48:1 — `#10B981` fails AA as text on white) |
+| `--link-hover` | `#065F46` | `#065F46` | Link hover |
+| `--accent-platform` | — | `#10B981` | Emerald accent on Journal page (subtitle keel, FAQ chevron) |
 
-**Inconsistency to note:** `--text` and `--text-muted` differ between `index.html` (lighter) and `about.html` / `contact.html` (darker). Either intentional and should be documented per page, or drift — flag if standardising.
+Supporting values used directly (not tokenised): Elevated Navy `#112240` (audit ledger), Navy Hairline `#233554` (ledger borders), Emerald hover `#059669`, Emerald Soft `rgba(16,185,129,0.15)` (seal/tints).
+
+**Purple/indigo is retired** across the system — with one granted exception: the `/experts` specialism chips (see *Chip palette* below; Lisa, 2026-06-11). No purple anywhere else.
 
 ### Chip palette (experts page only)
 
-Specialism chips use low-saturation cool tones — chips themselves are not interactive, so colour conveys category, not status:
+Original low-saturation multi-hue scheme, retained by **explicit operator decision (Lisa, 2026-06-11)** as a bounded exception to the brand's "no purple anywhere" rule — decorative, non-interactive category colour only:
 
 | Group | Background | Border |
 |---|---|---|
-| Quality systems & audit | `rgba(99, 102, 241, 0.12)` | `rgba(99, 102, 241, 0.28)` |
+| Quality systems & audit (base `.chip`) | `rgba(99, 102, 241, 0.12)` | `rgba(99, 102, 241, 0.28)` |
 | Regulatory submissions (`.chip-regulatory`) | `rgba(139, 92, 246, 0.12)` | `rgba(139, 92, 246, 0.30)` |
 | Product safety (`.chip-safety`) | `rgba(6, 182, 212, 0.13)` | `rgba(6, 182, 212, 0.32)` |
 | Design / software / clinical (`.chip-design`) | `rgba(59, 130, 246, 0.12)` | `rgba(59, 130, 246, 0.30)` |
 | Standalone disciplines (`.chip-standalone`) | `rgba(100, 116, 139, 0.15)` | `rgba(100, 116, 139, 0.32)` |
 
-### Indigo usage rule
-
-`--accent-platform: #6366f1` is the MVP platform's action colour. On the marketing site it is used **only for zoning** — never as a primary CTA. Specifically:
-- Left border on `experts.html` page-subtitle
-- Border on the indicative-terms banner at the top of `/experts`
-- `?` badge next to the FAQ heading on `/experts`
-- Chevron tint when a FAQ accordion is open
-- Quality-systems chip group accent
-
-The primary CTA stays Bottle Green `#166534` — the indigo `#6366f1` fails WCAG AA on the light glass-card surface for action elements.
+Chip text is `--card-text` (passes AA on all tints). These hues must not migrate to any other component or surface.
 
 ## Typography
 
 | Element | Font | Weight | Size |
 |---|---|---|---|
-| Hero `<h1>` | EB Garamond | 700 | `clamp(2.6rem, 6vw, 3.8rem)` |
+| Hero `<h1>` (`.hero-bridge-headline`) | EB Garamond | 700 | `clamp(2.6rem, 7vw, 4.5rem)` |
 | Page title (sub-pages) | EB Garamond | 700 | `clamp(2.2rem, 5vw, 3.2rem)` |
 | Section heading (`.section-heading`) | EB Garamond | 700 | `clamp(1.8rem, 4vw, 2.6rem)` |
 | Card `<h2>` | EB Garamond | 700 | `clamp(1.4rem, 3vw, 1.8rem)` |
 | Body | Inter | 400 | `0.95rem` |
-| CTA / nav | Inter | 500 | `0.9rem`–`0.95rem` |
+| CTA / nav | Inter | 500–600 | `0.8rem`–`0.95rem` |
+| Audit timestamps, footer sign-off | JetBrains Mono / Fira Code / monospace | 400 | `0.72rem` |
 
 ### Page-title vertical stretch
 
@@ -79,115 +84,115 @@ The primary CTA stays Bottle Green `#166534` — the indigo `#6366f1` fails WCAG
 ## Layout
 
 - Single column. `.container { max-width: 880px; margin: 0 auto; padding: 0 2rem; }`
-- Page background fills viewport; isometric cube SVG grid pattern at 18% opacity sits behind content (`.bg-pattern`, fixed, `inset: 0`).
-- Vertical rhythm: `.content-section { padding: 1.5rem 0; }` and `.content-card { margin-bottom: 1.5rem; }`. Gap-spacers `.section-gap` (2rem) and `.section-gap-lg` (3.5rem) for hero-to-stats and similar transitions on `index.html`.
+- Dark pages: isometric cube SVG grid pattern at 18% opacity behind content (`.bg-pattern`), plus one `.authority-watermark` (white mark at 7%/5%) per page header. Journal page: single fixed `.journal-bg-mark` (navy mark, greyscaled, 5%).
+- `html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }` on every page — the fixed nav is ~52px; anchor jumps land below it.
+- Vertical rhythm: `.content-section { padding: 1.5rem 0; }` and `.content-card { margin-bottom: 1.5rem; }`. Gap-spacers `.section-gap` (2rem) and `.section-gap-lg` (3.5rem) on `index.html`.
 
 ### Breakpoints
 
 | Width | Behaviour |
 |---|---|
 | `≤ 736px` (index only) | Stats grid collapses to single column; CTA grid collapses; glass-card padding reduces. |
-| `≤ 640px` | Mobile breakpoint. Hamburger nav engages, glass-card padding reduces to `2.5rem 1.5rem`, flow steps go vertical, FAQ touch targets size up. |
-| `≤ 480px` | Hero `h1` shrinks; brand name `<span>` hides next to the nav logo (leaves the logo only); chip type size reduces. |
+| `≤ 640px` | Mobile breakpoint. Hamburger nav engages, glass-card padding reduces, flow steps go vertical. |
+| `≤ 480px` | Hero `h1` shrinks; nav brand `<span>` hides; chip type reduces; regulatory-gap list rows stack vertically; cookie banner stacks. |
 | `≤ 360px` | Hero `h1` shrinks further; CTA button padding reduces. |
 
 ## Components
 
+### Bridge hero (`.hero-bridge`, index.html)
+
+White hero card (2px emerald border, 20px radius) centred on the dark→light "bridge" gradient (`#0A192F` → `#F3F4F6`, 125deg; steeper 160deg variant ≤736px). EB Garamond headline in navy with `scaleY(1.12)`, italic emerald eyebrow below it, two watermark layers (white mark top-left at 7%, greyscaled navy mark bottom-right at 5%). CTA row: primary emerald `.scroll-btn` + `.scroll-btn-outline` (transparent, navy text, faint navy border).
+
 ### Glass card
 
-```css
-.glass-card {
-    background: var(--surface);
-    backdrop-filter: blur(20px) saturate(1.2);
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 4rem 3.5rem;
-    color: var(--card-text);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
-}
-```
-
-`.content-card` adds `margin-bottom: 1.5rem`. On `≤640px`, padding reduces to `2.5rem 1.5rem` and radius to `18px`.
+White `#FFFFFF` surface, `border-radius: 24px` (16px on Journal), 2px emerald border on dark pages / 1px hairline on Journal, `padding: 4rem 3.5rem`, soft shadow. `.content-card` adds `margin-bottom: 1.5rem`. On `≤640px`, padding reduces and radius drops to 18px.
 
 ### Primary CTA button
 
-```css
-.cta-btn {
-    background: var(--btn-bg);          /* #166534 */
-    color: var(--btn-text);
-    padding: 0.9rem 2rem;
-    border-radius: 50px;                /* full pill */
-    font-weight: 500;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-.cta-btn:hover { background: #14532d; transform: translateY(-1px); }
-```
+Emerald `#10B981` fill, **Deep Navy `#0A192F` text**, full pill (50px radius), hover `#059669`. Outline variant (`.cta-btn.cta-outline`, contact page): transparent, `1.5px` solid `--link` border, `--link` text, fills emerald on hover. Hero secondary (`.scroll-btn-outline`, index): transparent, navy text, faint navy border.
 
-Outline variant (`.cta-btn.cta-outline`) on `contact.html` for secondary actions: transparent background, `1.5px` solid bottle-green border, fills on hover.
+### Nav (all six pages)
 
-### Nav + hamburger (≤640px)
+Fixed translucent bar (navy-tinted on dark pages, light-tinted on Journal), brand mark + wordmark left, links right, hamburger `≤640px`. Standard link set everywhere: Problem · Solution · About · For Experts · Early Access · Contact, plus a `.nav-cta` emerald pill — "Book a demo" (cal.eu) on index/about/contact, "Apply" (#apply) on experts.
 
-Same nav across all six pages (except `experts.html`, which uses an expert-context variant: `Apply | Rates | FAQ | Back to main site`).
+- Current page marked with `aria-current="page"`, styled as an inset emerald underline; index runs an IntersectionObserver scroll-spy that applies the same `.is-active` style to in-page anchors.
+- `aria-expanded`/`aria-controls` on the toggle; outside-click and **Escape** close the menu (Escape returns focus to the toggle).
+- Nav logo: **white mark on dark navs, navy mark on the Journal nav** — never navy-on-navy.
 
-Hamburger button hidden on desktop. At `≤640px` the nav links list collapses to a `position: absolute` dropdown beneath the nav bar, animated via `max-height` transition. `aria-expanded` toggled by `toggleNav(btn)` inline JS; outside-click closes the menu. Native semantics — no library.
+### Breadcrumbs (sub-pages)
+
+`.breadcrumbs` line above each sub-page title (`Home / <Page>`, 0.78rem muted, emerald `/` separator), mirroring the BreadcrumbList JSON-LD.
+
+### Audit seal (`.audit-seal`)
+
+Signature trust chip: Emerald Soft pill with `✓` prefix. Text `#047857` on white cards; `#10B981` inside the dark audit ledger (`.audit-ledger .audit-seal`). Used on the index Security feature, the audit-ledger header ("Audit Ready"), and as credential badges on `about.html`.
+
+### Footer (all six pages)
+
+Copyright ("PraxisVerify Limited"), `.footer-legal` line "Registered in Ireland · CRO 812849", standard link set (Home · About · For Experts · Contact · Privacy Policy · Terms of Service · LinkedIn), and a monospace `.footer-updated` sign-off: `Reviewed: YYYY-MM-DD · Lisa Donlon`.
 
 ### Flow steps (`.flow`)
 
-Four-step numbered horizontal flow on desktop (`grid-template-columns: repeat(4, 1fr)`), collapses to vertical on mobile with the connector line rotated to a left-rail. Numbered circles `48px`, Bottle Green background. Used on `index.html` and `experts.html`.
+Four-step numbered horizontal flow on desktop, vertical with left-rail connector on mobile. Numbered circles 48px, emerald background, navy numerals. Used on `index.html` and `experts.html`.
 
 ### FAQ accordion (experts.html)
 
-Native `<details>/<summary>` — no JS. Each `<details class="faq-item">` is a pill-shaped card with a chevron indicator that rotates on open. The whole FAQ card carries an indigo `?` badge next to the heading. Open state gets a brighter background and an indigo border tint.
-
-### Chips (experts.html)
-
-Pill-shaped (`border-radius: 999px`), small (`font-size: 0.82rem`), used in `.chip-grid` flexbox rows. Group-specific accent classes listed above. Non-interactive — colour conveys category only.
+Native `<details>/<summary>` — no JS. Emerald accents: open-state border, chevron tint, and a `?` badge (emerald fill, **navy** glyph) next to the heading.
 
 ### Stat cards (index.html)
 
-Grid of three on desktop, single column on `≤736px`. Each is a smaller `border-radius: 16px` glass card with a large EB Garamond numeral.
+Grid of three on desktop, single column `≤736px`. Smaller 16px-radius cards with large EB Garamond numerals in `#0A192F`.
 
-### Cookie banner (index.html)
+### Cookie banner (all six pages)
 
-Fixed at bottom, glass surface, two-button (Accept / Decline) consent. Gates GA4 via Consent Mode v2. Choice persists in `localStorage`. Banner hides once a choice is made.
+Fixed at bottom, two-button (Accept / Decline) consent gating GA4 via Consent Mode v2. Choice persists in `localStorage` (`cookie_consent`), so the banner shows at most once per visitor across the site. GA4 head block + CSP meta replicated on every page.
 
 ## Accessibility
 
-- All nav toggles carry `aria-expanded` and `aria-controls`.
-- Hamburger uses a real `<button>` element.
-- `:focus-visible` outline on FAQ summaries uses `--accent-platform` at `2px` with `2px` offset.
-- Skip link `.skip-link` on `index.html` jumps to `#main-content`.
-- Colour contrast: body text on glass cards passes AA at 13:1+. CTA bottle-green on glass passes AA at 4.1:1.
+- WCAG 2.1 AA is a brand requirement. Emerald `#10B981` is never used as text on white (2.54:1) — `--link: #047857` covers that role. Button/badge text on emerald fills is Deep Navy.
+- `a:focus-visible`/`button:focus-visible`: 2px emerald outline, 2px offset; `#047857` override inside white cards (3:1 non-text minimum); pill radius on buttons.
+- Skip link (`.skip-link` → `#main-content`) on every page; `<main id="main-content">` everywhere.
+- All nav toggles carry `aria-expanded` and `aria-controls`; hamburger is a real `<button>`; Escape closes the mobile menu.
+- `prefers-reduced-motion` disables the stamp animation.
 - Hero `<h1>` and section headings use real semantic tags; serif treatment is visual only.
+
+## Assets
+
+- Favicons: `img/brand/mark-adaptive.svg` (navy mark that flips white via `prefers-color-scheme: dark`), `img/pvlogo.png` PNG fallback, `/favicon-180.png` apple-touch icon (white mark on solid `#0A192F` — iOS composites transparency onto black).
+- Social card: `img/social-card.png` (1200×630, exact `#0A192F`, white stacked logo, emerald italic tagline). Duplicates kept in sync: `img/brand/social-card-1200x630.png`, root `social-card-1200x630.png`. Template: `drafts/social-card.html`, rendered via headless Chrome at 1200×630.
+- Brand asset source of truth pending the BrandKit → `~/Projects/praxisverify/brand/` promotion (Decision 010).
 
 ## Page patterns
 
 Every page follows the same skeleton:
 
-1. `<head>` — meta, Schema.org JSON-LD (WebPage/Organization/Person/Breadcrumbs/FAQPage/JobPosting as relevant), inline `<style>`.
-2. `<svg class="bg-pattern">` — fixed background cube grid.
-3. `<nav class="site-nav">` — fixed top bar with brand, hamburger, links.
-4. `<header class="page-header">` — first glass card with title and subtitle.
-5. `<main>` → `<section class="content-section">` → `<div class="container">` → one or more `<div class="glass-card content-card">`.
-6. `<footer class="footer-section">` — copyright, footer links, last-updated `<time>`.
-7. Inline `<script>` at end of body for nav toggle (and on `index.html` for fade-in observer and cookie banner).
+1. `<head>` — meta, CSP, GA4 + Consent Mode v2, Schema.org JSON-LD (WebPage/Organization/Person/Breadcrumbs/FAQPage/JobPosting as relevant), inline `<style>`.
+2. Background layer — cube grid SVG (dark pages) or `.journal-bg-mark` (experts).
+3. Skip link → `<nav class="site-nav">` fixed top bar.
+4. `<header class="page-header">` — first glass card with breadcrumbs, title and subtitle.
+5. `<main id="main-content">` → `<section>` → `<div class="container">` → glass cards.
+6. `<footer class="footer-section">` — copyright, CRO line, links, monospace reviewed date.
+7. Cookie banner + inline `<script>` (nav toggle, Escape handler, banner display; index adds fade-in observer and scroll-spy).
 
 ## Conventions
 
-- **Datestamps:** every page carries `<meta name="date">`, JSON-LD `dateModified`, and a visible footer `<time datetime>`. Update all three together when shipping a content change.
+- **Datestamps:** every page carries `<meta name="date">`, JSON-LD `dateModified`, and a visible footer `<time datetime>`. Update all of them together (plus `sitemap.xml` lastmod and `llms.txt`) when shipping a content change.
 - **Schema.org:** changes to visible FAQ or specialism content must be reflected in the FAQPage / JobPosting JSON-LD on the same page.
-- **Abbreviations:** expand on first use per page (e.g. "Quality Management System (QMS)") then use the abbreviation. Industry abbreviations explained: see `experts.html` for the canonical list.
+- **Legal entity:** "PraxisVerify Limited" in legal-weight contexts (footers, terms, privacy, schema `legalName`); plain "PraxisVerify" elsewhere. CRO 812849.
+- **Abbreviations:** expand on first use per page, then abbreviate.
 - **UK English** spelling throughout. Currency: € first, $ second.
 - **No emojis** in copy unless explicitly approved.
-- **No light mode** without explicit approval — dark navy + glass cards is the intended primary experience.
+- **Pillar discipline:** dark pages stay dark (Authority); `experts.html` stays light (Journal). Don't collapse the modes.
 
 ## Anti-patterns (don't do)
 
-- Don't introduce indigo `#6366f1` as a CTA colour on the marketing site (fails WCAG on glass cards).
-- Don't wrap the logo in a white container.
-- Don't use `rounded-md` (6px) on interactive elements — `rounded-lg` (8px) minimum, full pills for CTAs.
-- Don't use semantic status colours (success/warning/danger/info) for non-status decoration.
-- Don't add a build step or extract CSS to a stylesheet without a clear migration plan — the inline-CSS-per-page constraint is intentional (zero build, edits land directly).
+- No purple/indigo anywhere — retired with the old palette. (Granted exception: `/experts` chips only.)
+- No white text on emerald `#10B981` (2.54:1 AA failure) — Deep Navy text, or `#047857` fill if white text is unavoidable.
+- No emerald `#10B981` as *text* on white cards — use `--link: #047857`.
+- Don't wrap the logo in a white container; don't put the navy mark on a dark nav.
+- Don't use `rounded-md` (6px) on interactive elements — 8px minimum, full pills for CTAs.
+- Don't use semantic status colours for non-status decoration.
+- Don't add a build step or extract CSS to a stylesheet without a clear migration plan — the inline-CSS-per-page constraint is intentional.
 - Don't drop `transform: scaleY(1.15)` from page titles without also dropping the `line-height: 1.5` compensation — they're paired.
 
 ## When this file should be updated

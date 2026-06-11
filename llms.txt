@@ -2,7 +2,7 @@
 
 > Expert-in-the-Loop verification platform connecting life sciences companies to pre-vetted regulatory experts through a secure, auditable marketplace.
 
-- Last Updated: 2026-05-02
+- Last Updated: 2026-06-11
 - Contact: info@praxisverify.com
 - Website: [https://praxisverify.com](https://praxisverify.com)
 
@@ -12,10 +12,10 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 
 ## Expert Vetting Methodology
 
-- Credential Verification: All experts hold current ISO 13485 Lead Auditor, FDA RAPS certifications, or equivalent regulatory qualifications verified against issuing bodies.
+- Credential Verification: Experts are pre-vetted, with credentials (e.g. ISO 13485 lead auditor qualifications, RAPS/IRCA/CQI memberships, or equivalent) verified against the issuing bodies.
 - Zero-Trust Security: Document review occurs in-browser only; no downloads permitted; automatic 90-day deletion protocol ensures intellectual property protection.
 - Industry Specialisation: Experts categorised by therapeutic area (Cardiovascular, Orthopaedic, IVD, SaMD) and regulatory jurisdiction (FDA, EMA, Health Canada, NMPA).
-- Quality Assurance: Multi-stage review process with senior regulatory consultant oversight for all submission-critical documents.
+- Quality Assurance: Document review by credentialed independent experts, with every action logged in a complete audit trail designed to support 21 CFR Part 11.
 - One-Time Credentialing: Platform credentialing replaces per-client vendor qualification, reducing expert engagement from months to hours.
 
 ## Platform Features

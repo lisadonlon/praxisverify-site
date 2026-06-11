@@ -13,12 +13,22 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Terms of Service — PraxisVerify">
     <meta name="twitter:description" content="Platform usage, acceptable use, early access terms, and intellectual property terms for the life sciences expert marketplace.">
-    <link rel="icon" type="image/svg+xml" href="img/brand/mark-navy-transparent.svg">
+    <link rel="icon" type="image/svg+xml" href="img/brand/mark-adaptive.svg">
     <link rel="icon" type="image/png" href="img/pvlogo.png">
-    <meta name="date" content="2026-04-19">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="date" content="2026-06-11">
     <link rel="canonical" href="https://praxisverify.com/terms">
     <link rel="help" type="text/plain" href="https://praxisverify.com/llms.txt" title="LLM site info">
     <link rel="preload" href="img/brand/mark-navy-transparent.svg" as="image" type="image/svg+xml">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com;">
+    <!-- Google Analytics (GA4) with Consent Mode v2 -->
+    <script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCNYQKTP9W"></script>
+    <script>
+gtag('js',new Date());gtag('config','G-HCNYQKTP9W');if(localStorage.getItem('cookie_consent')==='granted'){gtag('consent','update',{'analytics_storage':'granted'});}function acceptCookies(){localStorage.setItem('cookie_consent','granted');gtag('consent','update',{'analytics_storage':'granted'});document.getElementById('cookie-banner').remove();}function declineCookies(){localStorage.setItem('cookie_consent','denied');document.getElementById('cookie-banner').remove();}
+    </script>
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -28,7 +38,7 @@
         "description": "PraxisVerify terms of service. Platform usage, acceptable use, early access terms, and intellectual property terms for the life sciences expert marketplace.",
         "url": "https://praxisverify.com/terms",
         "datePublished": "2026-04-19",
-        "dateModified": "2026-04-19",
+        "dateModified": "2026-06-11",
         "author": {
             "@type": "Person",
             "name": "Lisa Donlon"
@@ -61,6 +71,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <style>
@@ -76,11 +87,13 @@
             --text-muted: #8892A6;
             --btn-bg: #10B981;
             --btn-text: #0A192F;
+            --link: #047857;
+            --link-hover: #065F46;
             --heading: 'EB Garamond', 'Georgia', serif;
             --body: 'Inter', 'Segoe UI', sans-serif;
         }
 
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
         body {
             font-family: var(--body);
             background: var(--bg);
@@ -182,11 +195,11 @@
             line-height: 1.8;
         }
         .policy-card a {
-            color: var(--btn-bg);
+            color: var(--link);
             text-decoration: underline;
         }
         .policy-card a:hover {
-            color: #059669;
+            color: var(--link-hover);
         }
 
         .footer-section {
@@ -208,6 +221,8 @@
         .footer-links a:hover {
             color: var(--card-text);
         }
+        .footer-legal { font-size: 0.75rem; color: var(--card-text-muted); margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+        .footer-updated { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.72rem; letter-spacing: 0.04em; color: var(--card-text-muted); margin-top: 0.75rem; }
 
         .site-nav {
             position: fixed;
@@ -279,8 +294,30 @@
 @keyframes stamp { 0% { transform: scale(1.08); opacity: 0; } 60% { transform: scale(0.98); opacity: 1; } 100% { transform: scale(1); } }
 .stamp-on-mount { animation: stamp 280ms cubic-bezier(0.2, 0.7, 0.3, 1.2) both; }
 @media (prefers-reduced-motion: reduce) { .stamp-on-mount { animation: none; } }
-.audit-seal { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(16, 185, 129, 0.15); color: #10B981; font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; border: 1px solid rgba(16, 185, 129, 0.42); }
+.audit-seal { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.8rem; border-radius: 999px; background: rgba(16, 185, 129, 0.15); color: #047857; font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; border: 1px solid rgba(16, 185, 129, 0.42); }
 .audit-seal::before { content: "\2713"; font-weight: 700; }
+a:focus-visible, button:focus-visible { outline: 2px solid #10B981; outline-offset: 2px; border-radius: 8px; }
+.glass-card a:focus-visible, .glass-card button:focus-visible, .cookie-banner a:focus-visible, .cookie-banner button:focus-visible { outline-color: #047857; }
+.nav-cta:focus-visible, .cookie-btn:focus-visible { outline-offset: 3px; border-radius: 50px; }
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--btn-bg); color: var(--btn-text); padding: 8px 16px; z-index: 100; border-radius: 0 0 8px 0; font-size: 0.85rem; }
+.skip-link:focus { top: 0; }
+.nav-cta { background: var(--btn-bg); color: var(--btn-text) !important; padding: 0.4rem 1rem; border-radius: 50px; font-weight: 600; }
+.nav-cta:hover { background: #059669; color: var(--btn-text); text-decoration: none; }
+.nav-links a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -2px 0 #10B981; padding-bottom: 2px; }
+.nav-links a.nav-cta[aria-current="page"] { box-shadow: none; }
+.breadcrumbs { font-size: 0.78rem; color: var(--card-text-muted); margin-bottom: 1.25rem; }
+.breadcrumbs a { color: var(--card-text-muted); }
+.breadcrumbs a:hover { color: var(--card-text); }
+.breadcrumbs .sep { color: #047857; margin: 0 0.4rem; }
+.cookie-banner { position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 99; background: rgba(232, 232, 240, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); padding: 1.25rem 1.75rem; display: flex; align-items: center; gap: 1.25rem; max-width: 620px; width: calc(100% - 2rem); }
+.cookie-banner p { font-size: 0.82rem; color: var(--card-text-muted); line-height: 1.5; margin: 0; flex: 1; }
+.cookie-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+.cookie-btn { padding: 0.5rem 1rem; border-radius: 50px; font-family: var(--body); font-size: 0.8rem; font-weight: 500; cursor: pointer; border: none; transition: all 0.2s; }
+.cookie-accept { background: var(--btn-bg); color: var(--btn-text); }
+.cookie-accept:hover { background: #059669; }
+.cookie-decline { background: transparent; color: var(--card-text-muted); }
+.cookie-decline:hover { color: var(--card-text); }
+@media (max-width: 480px) { .cookie-banner { flex-direction: column; text-align: center; gap: 0.75rem; } }
 </style>
 </head>
 <body>
@@ -304,7 +341,9 @@
 </svg>
 
 <!-- ════════════════════ HEADER ════════════════════ -->
-<nav class="site-nav">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
     <div class="container">
         <a href="/" class="nav-brand">
             <img src="img/brand/mark-white-transparent.svg" alt="PraxisVerify" width="28" height="28">
@@ -328,17 +367,18 @@
     <div class="authority-watermark" aria-hidden="true"></div>
     <div class="container">
         <div class="glass-card">
+            <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Terms of Service</span></nav>
             <div class="header-logo">
                 <a href="/"><img src="img/brand/mark-navy-transparent.svg" alt="PraxisVerify logo" width="80" height="80"></a>
             </div>
             <h1 class="page-title">Terms of Service</h1>
-            <p class="page-subtitle">Last updated <time datetime="2026-04-19">April 2026</time> &middot; Lisa Donlon, Founder</p>
+            <p class="page-subtitle">Last updated <time datetime="2026-06-11">June 2026</time> &middot; Lisa Donlon, Founder</p>
         </div>
     </div>
 </header>
 
 <!-- ════════════════════ TERMS CONTENT ════════════════════ -->
-<main>
+<main id="main-content">
 <section class="policy-section">
     <div class="container">
 
@@ -382,7 +422,7 @@
         <!-- Intellectual Property -->
         <div class="glass-card policy-card">
             <h2>Intellectual Property</h2>
-            <p>All documents uploaded to the Platform remain the intellectual property of the uploading party. PraxisVerify does not claim ownership of any client documents. Platform content, design, and technology are the property of PraxisVerify Ltd.</p>
+            <p>All documents uploaded to the Platform remain the intellectual property of the uploading party. PraxisVerify does not claim ownership of any client documents. Platform content, design, and technology are the property of PraxisVerify Limited.</p>
             <p>Expert reviewers may not copy, reproduce, distribute, or retain any client documents or data accessed through the Platform. Any work product generated during a review engagement (annotations, comments, assessment reports) becomes the property of the commissioning client upon completion. PraxisVerify retains no copies of client documents or expert work product beyond the 90-day retention period.</p>
         </div>
 
@@ -402,15 +442,15 @@
         <!-- Limitation of Liability -->
         <div class="glass-card policy-card">
             <h2>Limitation of Liability</h2>
-            <p>PraxisVerify provides a platform for connecting companies with regulatory experts. The Platform does not provide regulatory advice. Expert opinions delivered through the Platform are those of the individual expert and do not constitute legal or regulatory counsel from PraxisVerify Ltd.</p>
-            <p>The Platform is a marketplace that facilitates connections between companies and independent regulatory experts. It does not replace the professional judgement of your own regulatory affairs team, nor does it constitute a formal regulatory submission review by any regulatory authority. All regulatory submissions remain the sole responsibility of the sponsoring organisation. Experts engaged through the Platform operate as independent professionals, not as agents or employees of PraxisVerify Ltd.</p>
+            <p>PraxisVerify provides a platform for connecting companies with regulatory experts. The Platform does not provide regulatory advice. Expert opinions delivered through the Platform are those of the individual expert and do not constitute legal or regulatory counsel from PraxisVerify Limited.</p>
+            <p>The Platform is a marketplace that facilitates connections between companies and independent regulatory experts. It does not replace the professional judgement of your own regulatory affairs team, nor does it constitute a formal regulatory submission review by any regulatory authority. All regulatory submissions remain the sole responsibility of the sponsoring organisation. Experts engaged through the Platform operate as independent professionals, not as agents or employees of PraxisVerify Limited.</p>
         </div>
 
         <!-- Governing Law -->
         <div class="glass-card policy-card">
             <h2>Governing Law</h2>
             <p>These terms are governed by the laws of Ireland. Any disputes shall be subject to the exclusive jurisdiction of the Irish courts.</p>
-            <p>PraxisVerify Ltd is registered in Ireland. For cross-border engagements, users acknowledge that the Platform may be used by companies and experts in multiple jurisdictions, including the EU, UK, USA, Canada, and Australia. Applicable regulatory requirements in each jurisdiction remain the responsibility of the respective parties.</p>
+            <p>PraxisVerify Limited is registered in Ireland (CRO 812849). For cross-border engagements, users acknowledge that the Platform may be used by companies and experts in multiple jurisdictions, including the EU, UK, USA, Canada, and Australia. Applicable regulatory requirements in each jurisdiction remain the responsibility of the respective parties.</p>
         </div>
 
         <!-- Changes to Terms -->
@@ -433,21 +473,36 @@
 <footer class="footer-section">
     <div class="container">
         <div class="glass-card">
-            <p class="footer-copy">&copy; 2026 PraxisVerify Ltd. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 PraxisVerify Limited. All rights reserved.</p>
+            <p class="footer-legal">Registered in Ireland &middot; CRO 812849</p>
             <div class="footer-links">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
+                <a href="/experts">For Experts</a>
                 <a href="/contact">Contact</a>
                 <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
                 <a href="https://www.linkedin.com/company/praxisverify" target="_blank" rel="noopener">LinkedIn</a>
             </div>
+            <p class="footer-updated">Reviewed: <time datetime="2026-06-11">2026-06-11</time> &middot; Lisa Donlon</p>
         </div>
     </div>
 </footer>
 
+<!-- ── Cookie consent banner ── -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <p>We use cookies for anonymous analytics to improve this site. No personal data is collected. See our <a href="/privacy" style="text-decoration:underline">Privacy Policy</a>.</p>
+    <div class="cookie-btns">
+        <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+    </div>
+</div>
+
 <script>
 function toggleNav(btn){var menu=document.getElementById('nav-menu');var expanded=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!expanded);menu.classList.toggle('is-open');}
 document.addEventListener('click',function(e){var menu=document.getElementById('nav-menu');var btn=document.querySelector('.nav-toggle');if(!menu||!btn)return;if(menu.classList.contains('is-open')&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var menu=document.getElementById('nav-menu');var btn=document.querySelector('.nav-toggle');if(menu&&btn&&menu.classList.contains('is-open')){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');btn.focus();}});
+document.addEventListener('DOMContentLoaded',function(){if(!localStorage.getItem('cookie_consent')){var banner=document.getElementById('cookie-banner');if(banner)banner.style.display=''}});
 </script>
 </body>
 </html>
