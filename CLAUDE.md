@@ -10,9 +10,9 @@ The public face of the company — single-page landing site plus social/SEO asse
 
 | Layer | Choice | Notes |
 |-------|--------|-------|
-| Markup | Plain HTML | `index.html` (~920 lines) + `about.html`, `contact.html`, `privacy.html` |
-| Styles | Inline CSS | No external stylesheet, no Tailwind, no preprocessor |
-| Scripts | Inline JS | Nav show/hide on scroll, fade-in observer, cookie consent |
+| Markup | Plain HTML | `index.html` + `about.html`, `contact.html`, `experts.html`, `privacy.html`, `terms.html` |
+| Styles | Inline CSS | No external stylesheet, no Tailwind, no preprocessor. `index.html` carries the full block; the five interior pages share an identical smaller block |
+| Scripts | Inline JS | Fade-in observer + nav scroll-spy + ledger clock (index), hamburger toggle, cookie consent |
 | Hosting | GitHub Pages | `CNAME` file points to `praxisverify.com` |
 | CDN | GitHub Pages default | Cloudflare recommended — see `CLOUDFLARE-SETUP.md` |
 
@@ -20,13 +20,18 @@ The public face of the company — single-page landing site plus social/SEO asse
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Main page (hero, stats, trust, solution, about, beta CTA, contact footer) |
+| `index.html` | Main page (two-door hero, stat strip, the gap, how it works, audit ledger, early access, footer) |
 | `about.html` | Dedicated about page (AboutPage schema, founder bio, mission, services) |
 | `contact.html` | Contact page (ContactPage schema, demo CTA, email, LinkedIn, expert signup) |
-| `privacy.html` | GDPR-compliant privacy/cookie policy (dark theme, glass cards) |
+| `experts.html` | Expert recruitment page (credentialing, rates, vetting, FAQ) |
+| `privacy.html` | GDPR-compliant privacy/cookie policy |
+| `terms.html` | Terms of service |
+| `design.md` | **Design system as shipped** — tokens, components, breakpoints, anti-patterns. Read before any visual change |
+| `llms.txt` | AI crawler guidance |
+| `serve.py` | Local preview server mirroring GitHub Pages clean URLs (`python3 serve.py`) |
 | `CNAME` | Custom domain: `praxisverify.com` |
 | `robots.txt` | Crawler rules |
-| `sitemap.xml` | Search engine sitemap (index, about, contact, privacy) |
+| `sitemap.xml` | Search engine sitemap (all six pages) |
 | `CLOUDFLARE-SETUP.md` | Instructions for adding Cloudflare security headers |
 | `favicon-{32,64,180}.png` | Favicons (standard + Apple touch icon) |
 | `social-card-1200x630.png` | Open Graph card for link previews |
@@ -57,8 +62,8 @@ No CI. No build. No preview environment. GitHub Pages serves `index.html` direct
 
 ## SEO / E-E-A-T
 
-- Fixed nav bar (appears on scroll) with links: Problem → Solution → About → Beta → Contact
-- Dedicated pages: about.html (AboutPage), contact.html (ContactPage), privacy.html (WebPage)
+- Sticky nav bar on every page: The gap → How it works → Audit trail → For experts → About → Contact, plus a pill CTA
+- Dedicated pages: about.html (AboutPage), contact.html (ContactPage), experts.html, privacy.html, terms.html
 - About section on homepage with founder bio (Lisa Donlon)
 - Visible author byline + datePublished on all pages
 - Structured data: Organization, WebPage, WebSite, FAQPage, AboutPage, ContactPage schemas
@@ -67,9 +72,10 @@ No CI. No build. No preview environment. GitHub Pages serves `index.html` direct
 
 ## Working on the Site
 
+- **Read `design.md` first** — it is the site-specific record of tokens, components and anti-patterns actually shipped. `pv-branding` wins if the two disagree.
 - Edit `index.html` directly — the CSS is in the `<style>` block, the JS is inline at the bottom.
-- `about.html`, `contact.html`, `privacy.html` each have their own inline CSS (subset of index.html styles). Keep visual consistency across all pages.
-- Check the site still renders on mobile (hero breaks below ~640px need the existing media queries).
+- The five interior pages each carry their own inline CSS (an identical shared block). There is no stylesheet — a token change must be repeated across all six files; grep for the token.
+- Check the site still renders on mobile. Breakpoints: 860px (hamburger), 760px (stat strip), 736px (band padding), 480px (container padding). Multi-column blocks use `auto-fit` grids and reflow without breakpoints.
 - If adding a new page, remember to update `sitemap.xml` and add internal links from `index.html`.
 - Run `squirrelscan` for an SEO audit if making substantive content changes (see `squirrel.toml`).
 
