@@ -266,4 +266,4 @@ Unchanged: datestamps in `<meta name="date">` + JSON-LD `dateModified` + visible
 | Mono | Referenced, never loaded | JetBrains Mono loaded on every page |
 | Breakpoint for hamburger | 640px | 860px |
 
-**Open items:** the "Read the full framework detail →" link on the homepage points at `/about`, which does not yet carry that content. Either point it somewhere real or build the detail page.
+**Open items:** none. The "Read the full framework detail →" link on the homepage was removed on 2026-08-15 (Lisa) rather than repointed — it promised a framework write-up that does not exist. The paragraph it sat in ("None of these can be performed by AI alone…") is unchanged.
