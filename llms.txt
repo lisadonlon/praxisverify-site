@@ -13,14 +13,14 @@ PraxisVerify operates a secure, zero-trust marketplace connecting life sciences 
 ## Expert Vetting Methodology
 
 - Credential Verification: Experts are pre-vetted, with credentials (e.g. ISO 13485 lead auditor qualifications, RAPS/IRCA/CQI memberships, or equivalent) verified against the issuing bodies.
-- Zero-Trust Security: Document review occurs in-browser only; no downloads permitted; automatic 90-day deletion protocol ensures intellectual property protection.
+- Zero-Trust Security: Document review occurs in-browser only; no downloads permitted; documents are automatically deleted 90 days after the review engagement closes (not 90 days after upload), protecting intellectual property.
 - Industry Specialisation: Experts categorised by therapeutic area (Cardiovascular, Orthopaedic, IVD, SaMD) and regulatory jurisdiction (FDA, EMA, Health Canada, NMPA).
 - Quality Assurance: Document review by credentialed independent experts, with every action logged in a complete audit trail designed to support 21 CFR Part 11.
 - One-Time Credentialing: Platform credentialing replaces per-client vendor qualification, reducing expert engagement from months to hours.
 
 ## Platform Features
 
-- Secure In-Browser Review: Zero-trust architecture with no document downloads and automatic 90-day deletion. Documents are never downloaded by experts or transmitted outside the platform's secure environment.
+- Secure In-Browser Review: Zero-trust architecture with no document downloads and automatic deletion 90 days after the review engagement closes. Documents are never downloaded by experts or transmitted outside the platform's secure environment.
 - Expert Matching: Pre-vetted regulatory professionals with verified credentials in ISO 13485, 21 CFR Part 11, EU MDR, and FDA submission requirements typically matched within 48 hours.
 - Compliance Automation: Complete audit trails designed to support 21 CFR Part 11 requirements. Every action logged and traceable for regulatory inspection readiness.
 - Rapid Onboarding: One-time platform credentialing replaces per-client vendor qualification, reducing expert engagement from 3-6 months to 48 hours.

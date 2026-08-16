@@ -28,7 +28,7 @@ The dark/light split is now **within** each page rather than between pages. Ever
 - **Dark shell** — sticky navy nav, dark page header (or hero), dark footer. Deep Navy `#0A192F` deepening to `#08152a`.
 - **Light content** — `#F3F4F6` and `#FFFFFF` bands carrying the body content.
 
-`index.html` alternates bands down the page (dark hero → deep stat strip → light → white → dark ledger → light CTA → dark footer). The five interior pages run dark header → light content → dark footer.
+`index.html` alternates bands down the page (dark hero → deep stat strip → light → white → dark ledger → white FAQ → light CTA → dark footer). The five interior pages run dark header → light content → dark footer.
 
 > The old rule "dark pages stay dark, `experts.html` stays light" is **retired** (Lisa, 2026-08-15). `experts.html` now uses the same shell as every other page. The `.journal-bg-mark` element is retained in markup on that page but set to `display:none`.
 
@@ -156,12 +156,26 @@ Two auto-fit columns, `4rem` gap. Used for "Why Trust Can't Be Automated" (narra
 
 Native, no JS. Two shapes:
 
-- **`.acc`** — a bordered stack of `<details>` sharing one white card (the four regulatory frameworks).
+- **`.acc`** — a bordered stack of `<details>` sharing one white card (the four regulatory frameworks; the homepage FAQ).
 - **`.acc-solo`** — a single expander (the comparison table on index; the footer folds).
 
 Chevron is an inline SVG carrying `.pv-chev`, rotated 90° via `details[open] > summary .pv-chev`. The experts-page FAQ (`.faq-item` / `.faq-q`) uses a CSS triangle instead of the SVG but behaves identically.
 
 The comparison table, the References list and the Regulatory Disclaimer are all expanders now — this is the main density fix.
+
+### Homepage FAQ (`#faq`, index.html)
+
+White band between the audit ledger and the early-access CTA, using the `.acc`
+stack. Added 2026-08-16 so the five `FAQPage` Q&As have visible counterparts —
+they previously existed only in JSON-LD, which fails Google's requirement that
+FAQ content be on the page and, more importantly, hides them from LLM crawlers
+that read visible text and ignore structured data.
+
+**The visible copy and the `FAQPage` schema must stay verbatim-identical.**
+Change one, change the other. Check with:
+`python3 ~/Projects/praxisverify/marketing/site-copy/extract_site_copy.py`
+
+Not linked from the nav, and not observed by the scroll-spy.
 
 ### Four-step flow (`.flow`)
 
