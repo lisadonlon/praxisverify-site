@@ -137,7 +137,7 @@ Far fewer than before — the auto-fit grids absorb most of the work.
 
 ### Two-door hero (`index.html`)
 
-Radial navy gradient, masked hairline grid, mark watermark at 6% top-right. Amber pill badge with a slow-pulsing dot ("Early access · onboarding first sponsors"), EB Garamond headline, amber italic sub, body copy, then the two doors:
+Radial navy gradient, masked hairline grid, mark watermark at 6% top-right. Amber pill badge with a slow-pulsing dot ("Early access · onboarding first companies"), EB Garamond headline, amber italic sub, body copy, then the two doors:
 
 - **`.door-buyer`** — white card, emerald top rule, "Get a document verified" → cal.eu demo booking.
 - **`.door-expert`** — translucent card on navy, amber top rule, "Join the verified bench" → `/experts`.
